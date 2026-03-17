@@ -1,23 +1,16 @@
-# gemini_website_generator
-This is a GEMINI.md file that is used to generate a website using AI. There are several components that the site can create. I will make several variants of the site md file to include different components. 
+# React + Vite
 
-This is based on my Notion doc 
-https://www.notion.so/Gemini-3-1-Pro-Antigravity-Site-Design-e56ea1eb76514375956974d60c95cf1c?source=copy_link
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-# Phases
-This variant will be the base component that the original md file came with.
+Currently, two official plugins are available:
 
-1 Original
-2 Select the components that I want to include in my website
-3 Experiment with creating multiple pages
-4 Experiment with creating content based on another md file.
-5 Adapt the md to actually create my website based on another MD file with the content
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-# Final goal
-Create a website that is based on the content of another md file. The website should be created using the components that I have selected.
+## React Compiler
 
-Prompt the user to select the components that they want to include in their website. 
-Prompt the user to select the aesthetic direction that they want to use. 
-Prompt the user to select the content that they want to use. 
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
+## Expanding the ESLint configuration
 
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.

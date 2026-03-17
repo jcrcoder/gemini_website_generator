@@ -118,16 +118,50 @@ All cards: `bg-[background]` surface, subtle border, `rounded-[2rem]`, drop shad
 - **Middle card pops:** Primary-colored background with an accent CTA button. Slightly larger scale or `ring` border.
 - If pricing doesn't apply, convert this into a "Get Started" section with a single large CTA.
 
-### G. FOOTER
+### G. THE KINETIC BENTO — "The Data Mosaic"
+A non-uniform CSS grid (grid-template-areas) that houses social proof, stats, or small "featurettes."
+- Grid Logic: 4-6 tiles of varying spans (e.g., col-span-2, row-span-2). Use gap-4.
+- Interaction: Magnetic tiles. On mousemove, the tile's content (text or icon) translates slightly toward the cursor using GSAP, while a subtle radial-gradient glow follows the mouse position on the border.
+- The "Pulse" Tile: One tile features a live-updating "System Status" or a "User Count" that uses a GSAP counter to scramble/increment numbers on scroll.
+- Styling: bg-secondary/5 with a 1px border that looks like etched glass.
+
+### H. TEXT SCRUBBER — "The Narrative Reveal"
+A high-impact storytelling section where text "lights up" as the user scrolls. [User Testimonials]
+- Typography: Large, high-contrast sans-serif. Centered or justified.
+- Animation Logic: Wrap every word in a <span> using split-type. Set initial state to opacity-10 (or a dimmed color).
+- ScrollTrigger: Use scrub: true. As the user scrolls, the words transition to opacity-100 and the accent color.
+- Visual Hook: A "horizontal scanner" line (1px accent color) that moves down the screen at the same pace as the text illumination.
+
+### I. HORIZONTAL CASE — "The Infinite Track"
+A transition from vertical scrolling to horizontal movement for portfolio items or "Work" highlights.
+- Interaction: Use GSAP pin: true. The screen "locks," and vertical scroll progress is mapped to the xPercent of a long internal container.
+- The "Skew" Effect: As the user scrolls faster, the cards slightly skew (e.g., skewX: 5deg) to create a sense of physical momentum.
+- Content: Massive aspect-video cards with "parallaxing" images inside. The images should move in the opposite direction of the scroll.
+
+### J. THE COMMAND PALETTE — "The Utility Ghost"
+A minimalist interaction point that makes the website feel like a high-end software tool.
+- Visuals: A simple, centered "Search" bar at the bottom of a section or in the footer.
+- Interaction: Hovering over the bar triggers a "Command + K" floating hint. Clicking it opens a fixed modal with a blurred background.
+- Logic: Use React 19 useTransition to filter through a list of site sections or actions (e.g., "Go to Pricing", "Toggle Dark Mode", "Contact Founder").
+- Animation: GSAP scale(0.9) → scale(1) with a heavy back.out ease for the modal entry.
+
+### K. NOISE & GRAIN — "The Analog Layer"
+A global aesthetic treatment to prevent the "flat digital" look.
+- Structure: A fixed inset-0 div with a high z-index and pointer-events-none.
+- Visual: A repeating SVG noise texture at roughly opacity-5.
+- Animation: A 3-frame GSAP loop that toggles the background-position every 100ms. This creates a subtle "film grain" flicker that makes the Tailwind colors feel more organic and premium.
+
+### L. FOOTER
 - Deep dark-colored background, `rounded-t-[4rem]`.
 - Grid layout: Brand name + tagline, navigation columns, legal links.
+- Include social media links for LinkedIn, Twitter, Instagram, and Facebook as icons
 - **"System Operational" status indicator** with a pulsing green dot and monospace label.
 
 ---
 
 ## Technical Requirements (NEVER CHANGE)
 
-- **Stack:** React 19, Tailwind CSS v3.4.17, GSAP 3 (with ScrollTrigger plugin), Lucide React for icons.
+- **Stack:** React 19, Tailwind CSS v4.2.1, GSAP 3 (with ScrollTrigger plugin), Lucide React for icons.
 - **Fonts:** Load via Google Fonts `<link>` tags in `index.html` based on the selected preset.
 - **Images:** Use real Unsplash URLs. Select images matching the preset's `imageMood`. Never use placeholder URLs.
 - **File structure:** Single `App.jsx` with components defined in the same file (or split into `components/` if >600 lines). Single `index.css` for Tailwind directives + noise overlay + custom utilities.
@@ -149,3 +183,10 @@ After receiving answers to the 4 questions:
 7. Ensure every animation is wired, every interaction works, every image loads.
 
 **Execution Directive:** "Do not build a website; build a digital instrument. Every scroll should feel intentional, every animation should feel weighted and professional. Eradicate all generic AI patterns."
+
+
+# Git Repository
+Never modify core project files unless explicitly asked.
+- always ask before modifying .gitignore
+- always ask before modifying README.md
+- always ask before modifying GEMINI.md 
