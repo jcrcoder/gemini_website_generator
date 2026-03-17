@@ -1,0 +1,7 @@
+# Ignore everything
+*
+
+# But not this file
+!.gitignore
+!GEMINI.md
+!README.md
