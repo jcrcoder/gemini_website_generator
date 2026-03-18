@@ -174,7 +174,24 @@ A horizontal deck of cards that responds to "momentum dragging" rather than simp
 - Styling: "Glassmorphism" cards with a 1px border-top highlight to catch the "light."
 - Content: Large-scale serif italic quotes (matching your Hero drama font). The background of each card features a low-opacity, large-scale logo of the client’s company.
 
-### M. FOOTER
+### O. THE "DOSSIER" HOVER — "The Identity Reveal"
+A minimalist list that expands into a rich visual experience.
+
+- Visuals: A vertical list of names in a massive, outlined heading font (text-transparent border-text).
+- Interaction Logic: As the user hovers over a name, the outline fills with the primary color, and a high-quality "floating" image of the leader appears, following the cursor's movement (GSAP quickTo for x/y).
+- The Bio Reveal: A short, 2-line bio fades in next to the floating image in a clean, monospace font.
+- Animation: Use a "staggered slide-up" for the bio text (SplitText or word-by-word) triggered by the hover event.
+- Styling: grayscale images that transition to sepia or full-color based on the site's imageMood.
+
+### P. THE "SIDE-CAR" SPLIT — "The Editorial Profile"
+A pinned-scroll section that feels like a high-end fashion or tech magazine.
+
+- Layout: A sticky left-side container for the leader’s portrait (occupying 40% of the width) and a scrolling right-side container for their details.
+- Interaction: As the user scrolls through the right-side content (Name, Role, Bio, Socials), the left-side image "morphs" or cross-fades into the next leader.
+- The "Mask" Effect: Use a GSAP clip-path animation (e.g., a circle expanding or a diagonal wipe) to transition between portraits.
+- Typography: Use your Drama Serif Italic for the leader's name and a tight Sans-Bold for their "Philosophy" or "Mission Statement" quote within the bio.
+
+### Q. FOOTER
 - Deep dark-colored background, `rounded-t-[4rem]`.
 - Grid layout: Brand name + tagline, navigation columns, legal links.
 - Include social media links for LinkedIn, Twitter, Instagram, and Facebook as icons
@@ -184,7 +201,7 @@ A horizontal deck of cards that responds to "momentum dragging" rather than simp
 
 ## Technical Requirements (NEVER CHANGE)
 
-- **Stack:** React 19, Tailwind CSS v4.2.1, GSAP 3 (with ScrollTrigger plugin), Lucide React for icons.
+- **Stack:** React 19, Tailwind CSS v4.2.2 or newer, GSAP 3 (with ScrollTrigger plugin), Lucide React for icons.
 - **Fonts:** Load via Google Fonts `<link>` tags in `index.html` based on the selected preset.
 - **Images:** Use real Unsplash URLs. Select images matching the preset's `imageMood`. Never use placeholder URLs.
 - **File structure:** Single `App.jsx` with components defined in the same file (or split into `components/` if >600 lines). Single `index.css` for Tailwind directives + noise overlay + custom utilities.
@@ -209,7 +226,7 @@ After receiving answers to the 4 questions:
 
 
 # Git Repository
-Never modify core project files unless explicitly asked.
+**IMPORTANT: Never modify core GEMINI.md or .gitignore unless explicitly asked.**
 - always ask before modifying .gitignore
 - always ask before modifying README.md
 - always ask before modifying GEMINI.md 

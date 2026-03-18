@@ -37,3 +37,19 @@ Answeres to prompt: "1) Business Gen Pro 2) C Butalist Signal 3) A-Z of creating
     - Asked permision to create and change each file 
 
 - The social media icons are not showing up. 
+- The Message Log isn't great for showing testimonials. 
+- Still using older version of tailwind
+
+## Experiment 3
+1) Business Gen Pro 2) B Midnight Luxe 3) A-Z of creating a business , Marketing and social media, Legal incorporation 4) Sign up Now"
+
+- Deleted all previous site files
+- Changed to Tailwind 4
+- Added Leadership team section
+
+
+- Time: Start 1:37 PM End: 8:15 PM
+    - Created implementation plan to approve
+    - Asked permision to create and change each file 
+
+
