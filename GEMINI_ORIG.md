@@ -191,7 +191,23 @@ A pinned-scroll section that feels like a high-end fashion or tech magazine.
 - The "Mask" Effect: Use a GSAP clip-path animation (e.g., a circle expanding or a diagonal wipe) to transition between portraits.
 - Typography: Use your Drama Serif Italic for the leader's name and a tight Sans-Bold for their "Philosophy" or "Mission Statement" quote within the bio.
 
-### Q. FOOTER
+### Q. THE "KINETIC CARPET" — "The Interactive Grid"
+A static grid that feels alive through mouse-tracking and micro-animations.
+
+- Layout: A clean 4x4 or 5x5 grid with gap-px (1px borders) to create a "technical blueprint" look.
+- Interaction Logic: The "Flashlight" Effect. The entire grid is dimmed to opacity-20. As the user moves their cursor, a GSAP-driven radial mask follows the mouse, "lighting up" the logos within a 200px radius to opacity-100.
+- Animation: When a logo enters the "light," it performs a subtle scale(1.05) and a 3D rotationY (5-10 degrees) to give the grid physical depth.
+- Styling: Use your bg-secondary/5 for the grid cells to maintain the "Glassmorphism" theme.
+
+### R. THE "GRAVITY" LOGO CLOUD — "The Floating Ecosystem"
+A more experimental, "Art-Gallery" approach for a boutique feel.
+
+- Visuals: Logos are not in a grid; they are "floating" at different depths (z-index) and scales.
+- Logic: Use a subtle GSAP yoyo animation on each logo (randomized duration between 3-6s) to create a "buoyant" floating effect.
+- Parallax: Each logo has a different data-speed attribute. As the user scrolls, the logos move at different rates, creating a deep 3D field effect.
+- Styling: High-transparency logos that "overlap" slightly, emphasizing the backdrop-blur of your UI.
+
+### S. FOOTER
 - Deep dark-colored background, `rounded-t-[4rem]`.
 - Grid layout: Brand name + tagline, navigation columns, legal links.
 - Include social media links for LinkedIn, Twitter, Instagram, and Facebook as icons

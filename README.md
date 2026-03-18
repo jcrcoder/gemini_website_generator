@@ -46,10 +46,17 @@ Answeres to prompt: "1) Business Gen Pro 2) C Butalist Signal 3) A-Z of creating
 - Deleted all previous site files
 - Changed to Tailwind 4
 - Added Leadership team section
+- Gave it more laxed approval config
 
 
-- Time: Start 1:37 PM End: 8:15 PM
-    - Created implementation plan to approve
-    - Asked permision to create and change each file 
+- Time: Start 1:17 PM End: 1:28 PM
+    - Ran with less prompots
+    - First run, didn't show any content. Migrating to Tailwind 4 seems to have broken the engine
+    - Prompted to fix the code. It fixed the HorizontalCase component in React
+    - Tailwind 4 seems to be the issue, most components are not showing up like they did before.
+    - I prompted to review some of the non-functioning components. .
 
+## V1 Multipage
+Made some basic components for 3 pages. No longer asking the user for input about the site. 
 
+- Start 2:48 PM End: 3:00 PM
