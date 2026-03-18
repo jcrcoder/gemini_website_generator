@@ -151,7 +151,30 @@ A global aesthetic treatment to prevent the "flat digital" look.
 - Visual: A repeating SVG noise texture at roughly opacity-5.
 - Animation: A 3-frame GSAP loop that toggles the background-position every 100ms. This creates a subtle "film grain" flicker that makes the Tailwind colors feel more organic and premium.
 
-### L. FOOTER
+### L. THE "MESSAGE LOG" — "The Interactive Terminal"
+A component that mimics a Slack or Discord DM thread, making the testimony feel like a real-time conversation.
+
+- Logic: As the user scrolls into view, "messages" (testimonies) pop in one by one with a "typing..." indicator that lasts 0.5s.
+- Animation: A slight y: 20 bounce as each message appears.
+- Visuals: Dark mode "bubbles" with the accent color used for the client's name. A "Live Now" or "Recently Sent" pulsing green dot in the corner of the component.
+- Purpose: Best for "Modern/SaaS" brands to show that clients are currently active and happy.
+
+### M. THE "SPOTLIGHT" STACK — "The Focus Shift"
+A vertical stacking section where only the testimony in the center of the viewport is "active."
+
+- Logic: Use GSAP ScrollTrigger with scrub: true. As a testimony card enters the center 30% of the screen, it scales to 1.1, its opacity goes to 1, and the background of the entire section transitions to a subtle gradient of the client’s brand color.
+- Out-of-Focus State: Cards above and below the center are blurred (blur-lg), desaturated, and scaled down to 0.8.
+- Typography: The "Name" and "Role" are pinned to the right side of the screen and change via a "slide-up" animation as the cards scroll.
+
+### N. THE "KINETIC DRAG" CAROUSEL — "The Tactile Deck"
+A horizontal deck of cards that responds to "momentum dragging" rather than simple clicking.
+
+- Logic: Use InertiaPlugin (or a custom GSAP x setter). The user can "flick" the testimonials left or right.
+- The "Tilt" Effect: As the deck is dragged, the cards "lean" into the direction of the movement (e.g., rotationY: -15deg during a fast drag).
+- Styling: "Glassmorphism" cards with a 1px border-top highlight to catch the "light."
+- Content: Large-scale serif italic quotes (matching your Hero drama font). The background of each card features a low-opacity, large-scale logo of the client’s company.
+
+### M. FOOTER
 - Deep dark-colored background, `rounded-t-[4rem]`.
 - Grid layout: Brand name + tagline, navigation columns, legal links.
 - Include social media links for LinkedIn, Twitter, Instagram, and Facebook as icons
