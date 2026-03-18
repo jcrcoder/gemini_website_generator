@@ -4,4 +4,5 @@
 # But not this file
 !.gitignore
 !GEMINI.md
+!GEMINI_ORIG.md
 !README.md
