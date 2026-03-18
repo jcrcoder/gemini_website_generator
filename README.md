@@ -59,4 +59,22 @@ Answeres to prompt: "1) Business Gen Pro 2) C Butalist Signal 3) A-Z of creating
 ## V1 Multipage
 Made some basic components for 3 pages. No longer asking the user for input about the site. 
 
-- Start 2:48 PM End: 3:00 PM
+- Start 2:48 PM End: 2:55 PM
+- All 3 pages were created. Menu bar and footer were created and work on all pages
+    - Nav bar is difficult to see on light backgrounds
+
+**To Update**
+- FEATURES 
+    -"Interactive Functional Artifacts" is not a good fit for this site. 
+    - THE "SPOTLIGHT" STACK — "The Focus Shift" is hard to focus on it's always blurry, need a different testimonial section.
+    - 
+
+## Multipage V2
+- Added a new testimonial section called "THE "KINETIC DRAG" CAROUSEL — "The Tactile Deck"
+- Added a new section called "THE "CONVERSATIONAL" INTAKE — "The Human Protocol"
+- Updated some of the content sections of home, added another leads section in about.
+NOTE: Good to start a new conversation for each new website. Otherwise it assumes the objects you just cleaned up are still in the project.
+- need to give access to .gitignore. Seems tailwind reads the file and skips creating style if I leave ignore all
+- THE "SIDE-CAR" SPLIT — "The Editorial Profile" is the way to go for Leadership profiles
+-  THE THE "KINETIC DRAG" CAROUSEL — "The Tactile Deck" — "The Interactive Grid" is good for awards
+- THE "GRAVITY" LOGO CLOUD — "The Floating Ecosystem" is not great for client list, use the THE "KINETIC CARPET" — "The Interactive Grid"

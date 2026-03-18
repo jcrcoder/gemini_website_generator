@@ -37,7 +37,7 @@ Defines: `palette`, `typography`, `identity` (the overall feel), and `imageMood`
 These rules apply to ALL presets. They are what make the output premium.
 
 ### Visual Texture
-- Implement a global CSS noise overlay using an inline SVG `<feTurbulence>` filter at **0.05 opacity** to eliminate flat digital gradients.
+
 - Use a `rounded-[2rem]` to `rounded-[3rem]` radius system for all containers. No sharp corners anywhere.
 
 ### Micro-Interactions
@@ -78,7 +78,12 @@ A `fixed` pill-shaped container, horizontally centered.
 - **Typography:** Large scale contrast following the preset's hero line pattern. First part in bold sans heading font. Second part in massive serif italic drama font (3-5x size difference).
 - **Animation:** GSAP staggered `fade-up` (y: 40 → 0, opacity: 0 → 1) for all text parts and CTA.
 - CTA button below the headline, using the accent color.
-
+- Implement a CSS noise overlay using an inline SVG `<feTurbulence>` filter at **0.05 opacity** to eliminate flat digital gradients.
+- NOISE & GRAIN — "The Analog Layer"
+An aesthetic treatment to prevent the "flat digital" look.
+- Structure: A fixed inset-0 div with a high z-index and pointer-events-none.
+- Visual: A repeating SVG noise texture at opacity-5.
+- Animation: A 3-frame GSAP loop that toggles the background-position every 100ms. This creates a subtle "film grain" flicker that makes the Tailwind colors feel more organic and premium.
 
 ### B. PROTOCOL — "Sticky Stacking Archive"
 3 full-screen cards that stack on scroll.Three cards derived from the user's 3 value propositions. 
@@ -89,20 +94,17 @@ A `fixed` pill-shaped container, horizontally centered.
   3. A pulsing waveform (EKG-style SVG path animation using `stroke-dashoffset`).
 - Card content: Step number (monospace), title (heading font), 2-line description. Derive from user's brand purpose.
 
-### C. THE "SPOTLIGHT" STACK — "The Focus Shift"
-A vertical stacking section where only the testimony in the center of the viewport is "active."
+### C. THE "KINETIC DRAG" CAROUSEL — "The Tactile Deck"
+A horizontal deck of cards that responds to "momentum dragging" rather than simple clicking.
 
-- Logic: Use GSAP ScrollTrigger with scrub: true. As a testimony card enters the center 30% of the screen, it scales to 1.1, its opacity goes to 1, and the background of the entire section transitions to a subtle gradient of the client’s brand color.
-- Out-of-Focus State: Cards above and below the center are blurred (blur-lg), desaturated, and scaled down to 0.8.
-- Typography: The "Name" and "Role" are pinned to the right side of the screen and change via a "slide-up" animation as the cards scroll.
+- Logic: Use InertiaPlugin (or a custom GSAP x setter). The user can "flick" the testimonials left or right.
+- The "Tilt" Effect: As the deck is dragged, the cards "lean" into the direction of the movement (e.g., rotationY: -15deg during a fast drag).
+- Styling: "Glassmorphism" cards with a 1px border-top highlight to catch the "light."
+- Content: Large-scale serif italic quotes (matching your Hero drama font). The background of each card features a low-opacity, large-scale logo of the client’s company.
 
-### D. NOISE & GRAIN — "The Analog Layer"
-A global aesthetic treatment to prevent the "flat digital" look.
-- Structure: A fixed inset-0 div with a high z-index and pointer-events-none.
-- Visual: A repeating SVG noise texture at roughly opacity-5.
-- Animation: A 3-frame GSAP loop that toggles the background-position every 100ms. This creates a subtle "film grain" flicker that makes the Tailwind colors feel more organic and premium.
 
-### E. THE "KINETIC CARPET" — "The Interactive Grid"
+
+### D. THE "KINETIC CARPET" — "The Interactive Grid"
 A static grid that feels alive through mouse-tracking and micro-animations.
 
 - Layout: A clean 4x4 or 5x5 grid with gap-px (1px borders) to create a "technical blueprint" look. 
@@ -111,35 +113,11 @@ A static grid that feels alive through mouse-tracking and micro-animations.
 - Animation: When a logo enters the "light," it performs a subtle scale(1.05) and a 3D rotationY (5-10 degrees) to give the grid physical depth.
 - Styling: Use your bg-secondary/5 for the grid cells to maintain the "Glassmorphism" theme.
 
-### F. THE "GRAVITY" LOGO CLOUD — "The Floating Ecosystem"
-A more experimental, "Art-Gallery" approach for a boutique feel.
 
-- Visuals: Logos are not in a grid; they are "floating" at different depths (z-index) and scales.
-- 4 black and white logos of our customers
-- Logic: Use a subtle GSAP yoyo animation on each logo (randomized duration between 3-6s) to create a "buoyant" floating effect.
-- Parallax: Each logo has a different data-speed attribute. As the user scrolls, the logos move at different rates, creating a deep 3D field effect.
-- Styling: High-transparency logos that "overlap" slightly, emphasizing the backdrop-blur of your UI.
 ---
 
 ## ABOUT
-### A. THE "SIDE-CAR" SPLIT — "The Editorial Profile"
-A pinned-scroll section that feels like a high-end fashion or tech magazine.
-
-- Layout: A sticky left-side container for the leader’s portrait (occupying 40% of the width) and a scrolling right-side container for their details.
-- Interaction: As the user scrolls through the right-side content (Name, Role, Bio, Socials), the left-side image "morphs" or cross-fades into the next leader.
-- The "Mask" Effect: Use a GSAP clip-path animation (e.g., a circle expanding or a diagonal wipe) to transition between portraits.
-- Typography: Use your Drama Serif Italic for the leader's name and a tight Sans-Bold for their "Philosophy" or "Mission Statement" quote within the bio.
-
-### B. THE "DOSSIER" HOVER — "The Identity Reveal"
-A minimalist list that expands into a rich visual experience.
-
-- Visuals: A vertical list of names in a massive, outlined heading font (text-transparent border-text).
-- Interaction Logic: As the user hovers over a name, the outline fills with the primary color, and a high-quality "floating" image of the leader appears, following the cursor's movement (GSAP quickTo for x/y).
-- The Bio Reveal: A short, 2-line bio fades in next to the floating image in a clean, monospace font.
-- Animation: Use a "staggered slide-up" for the bio text (SplitText or word-by-word) triggered by the hover event.
-- Styling: grayscale images that transition to sepia or full-color based on the site's imageMood.
-
-### C. PHILOSOPHY — "The Manifesto"
+### A. PHILOSOPHY — "The Manifesto"
 - Full-width section with the **dark color** as background.
 - A parallaxing organic texture image (Unsplash, `imageMood` keywords) at low opacity behind the text.
 - **Typography:** Two contrasting statements. Pattern:
@@ -147,7 +125,15 @@ A minimalist list that expands into a rich visual experience.
   - "We focus on: [differentiated approach]." — massive, drama serif italic, accent-colored keyword.
 - **Animation:** GSAP `SplitText`-style reveal (word-by-word or line-by-line fade-up) triggered by ScrollTrigger.
 
-### D. TEXT SCRUBBER — "The Narrative Reveal"
+### B. THE "SIDE-CAR" SPLIT — "The Editorial Profile"
+A pinned-scroll section that feels like a high-end fashion or tech magazine.
+
+- Layout: A sticky left-side container for the leader’s portrait (occupying 40% of the width) and a scrolling right-side container for their details.
+- Interaction: As the user scrolls through the right-side content (Name, Role, Bio, Socials), the left-side image "morphs" or cross-fades into the next leader.
+- The "Mask" Effect: Use a GSAP clip-path animation (e.g., a circle expanding or a diagonal wipe) to transition between portraits.
+- Typography: Use your Drama Serif Italic for the leader's name and a tight Sans-Bold for their "Philosophy" or "Mission Statement" quote within the bio.
+
+### C. TEXT SCRUBBER — "The Narrative Reveal"
 A high-impact storytelling section where text "lights up" as the user scrolls. [User Testimonials]
 - Typography: Large, high-contrast sans-serif. Centered or justified.
 - Animation Logic: Wrap every word in a <span> using split-type. Set initial state to opacity-10 (or a dimmed color).
@@ -159,7 +145,10 @@ A high-impact storytelling section where text "lights up" as the user scrolls. [
 ## CONTACT
 ### A. THE "CONVERSATIONAL" INTAKE — "The Human Protocol"
 - A minimalist, full-screen or high-bleed section that treats the contact form as a piece of clean editorial design.
+- Fields in order: Name, Company, Additional Details, Email
 - Layout: max-w-4xl centered. No visible input boxes or borders by default—only high-contrast typography and "underlined" interactive spans.
+- Should fit inside a standard 1080p screen
+- Placeholders should be empty
 - Typography: The form is presented as a cohesive paragraph.
 - Standard Text: text-muted or opacity-60 sans-serif.
 - Interactive Fields: Massive, bold sans-serif (matching Hero Section "First Part") with a 1px bottom-border accent.
@@ -206,7 +195,6 @@ The submit button is not a static box; it is an animated event.
 ---
 
 # Git Repository
-**IMPORTANT: Never modify core GEMINI.md or .gitignore unless explicitly asked.**
-- always ask before modifying .gitignore
+**IMPORTANT: Never modify core GEMINI.md  unless explicitly asked.**
 - always ask before modifying README.md
 - always ask before modifying GEMINI.md 
