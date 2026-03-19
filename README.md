@@ -1,3 +1,22 @@
+
+# React + Vite
+
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+
+## React Compiler
+
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+
 # gemini_website_generator
 This is a GEMINI.md file that is used to generate a website using AI. There are several components that the site can create. I will make several variants of the site md file to include different components. 
 
@@ -78,3 +97,16 @@ NOTE: Good to start a new conversation for each new website. Otherwise it assume
 - THE "SIDE-CAR" SPLIT — "The Editorial Profile" is the way to go for Leadership profiles
 -  THE THE "KINETIC DRAG" CAROUSEL — "The Tactile Deck" — "The Interactive Grid" is good for awards
 - THE "GRAVITY" LOGO CLOUD — "The Floating Ecosystem" is not great for client list, use the THE "KINETIC CARPET" — "The Interactive Grid"
+
+## Multipage V3
+- Added 6 pages and they were created successfully
+- Footer doesn't look right with dark items next to them
+- The leaders section is not full screen as it was before, also not changing images as I scroll, it only did it the first time.
+- 
+Keep:
+- Tailwind.config.jr
+- vite.config.js
+- package.json
+- node_modules
+
+Full build - 6 pages took from 7:40 - 
