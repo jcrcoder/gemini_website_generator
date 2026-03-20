@@ -103,10 +103,11 @@ NOTE: Good to start a new conversation for each new website. Otherwise it assume
 - Footer doesn't look right with dark items next to them
 - The leaders section is not full screen as it was before, also not changing images as I scroll, it only did it the first time.
 - 
-Keep:
+Kept:
 - Tailwind.config.jr
 - vite.config.js
 - package.json
 - node_modules
+Not sure it did much, maybe it completed faster
 
 Full build - 6 pages took from 7:40 - 

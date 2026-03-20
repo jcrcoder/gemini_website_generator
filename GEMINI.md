@@ -13,21 +13,19 @@ When the user asks to build a site (or this file is loaded into a fresh project)
 
  **"What's the brand name and one-line purpose?"** — Brand Name and purpose: "NSerio - Build software with Relativity experts."
 
- **"What are your 3 key value propositions?"**  The 3 primary value propositions are "Relativity Experts", "Award-winning Developers", "Modern, Fast, & Accurate AI-Enabled Software Development" 
-
 **"What should visitors do?"** — The primary CTA is "Contact Juan"
 
 ---
 
 ## Aesthetic Preset
-
+Responsiveness: The website is intended for both desktop and mobile use. It should be responsive. 
 Defines: `palette`, `typography`, `identity` (the overall feel), and `imageMood` (Unsplash search keywords for hero/texture images).
 
 ### "Organic Tech" (Clinical Boutique)
 - **Identity:** A bridge between a biological research lab and an avant-garde luxury magazine.
 - **Palette:** Black Fores `#0D1F16` (Primary), Ember `#E8551F` (Accent), Vellum  `#F5F3EC` (Background), Ink `#111918` (Text/Dark), Mycelium `#4DB35A` (Accent 2)
 - **Typography:** Headings: "Plus Jakarta Sans" . Subheadings: "Outfit" (tight tracking). Hero and Drama: "Cormorant Garamond" Italic. Data: `"IBM Plex Mono"`.
-- **Image Mood:** dark green, moss, grainy texture, digital
+- **Image Mood:** dark green, geometric, grainy texture, digital
 - **Hero line pattern:** "[Concept noun] is the" (Bold Sans) / "[Power word]." (Massive Serif Italic)
 
 ---
@@ -67,10 +65,10 @@ A `fixed` pill-shaped container, horizontally centered.
 
 
 ## HOME page
-1. Generate hero copy using the brand name + purpose + preset's hero line pattern.
-2. Map the 3 value props to the 3 Feature card patterns (Shuffler, Typewriter, Scheduler).
-3. Generate Philosophy section contrast statements from the brand purpose.
-4. Generate Protocol steps from the brand's process/methodology.
+**IMPORTANT** Use @HOMEPAGE.md file for the content. The different 
+Sections will be specified as headings in the file.
+
+
 
 ### A. HERO SECTION — "The Opening Shot"
 - `100dvh` height. Full-bleed background image (sourced from Unsplash matching preset's `imageMood`) with a heavy **primary-to-black gradient overlay** (`bg-gradient-to-t`).
@@ -85,17 +83,29 @@ An aesthetic treatment to prevent the "flat digital" look.
 - Visual: A repeating SVG noise texture at opacity-5.
 - Animation: A 3-frame GSAP loop that toggles the background-position every 100ms. This creates a subtle "film grain" flicker that makes the Tailwind colors feel more organic and premium.
 
+### B. Services — "Sticky Stacking Archive"
+3 full-screen cards that stack on scroll.Three cards derived from the 3 services sections ("Design & Consulting","Custom Development","Workflow Automations","Integrations")
+- **Stacking Interaction:** Using GSAP ScrollTrigger with `pin: true`. As a new card scrolls into view, the card underneath scales to `0.9`, blurs to `20px`, and fades to `0.5`.
+- **Each card gets a unique canvas/SVG animation:**
+  1. A slowly rotating geometric motif (double-helix, concentric circles, or gear teeth).
+  2. A scanning horizontal laser-line moving across a grid of dots/cells.
+  3. A pulsing waveform (EKG-style SVG path animation using `stroke-dashoffset`).
+  4. A weveave of network with nodes that light up as they move through the web.
+
+- Card content: Step number (monospace), title (heading font), 2-line description. Derive from content of each sub-section under the Services section.
 
 
-### B. THE "KINETIC DRAG" CAROUSEL — "The Tactile Deck"
+### C. THE "KINETIC DRAG" CAROUSEL — "The Tactile Deck"
 A horizontal deck of cards that responds to "momentum dragging" rather than simple clicking.
 
 - Logic: Use InertiaPlugin (or a custom GSAP x setter). The user can "flick" the testimonials left or right.
 - The "Tilt" Effect: As the deck is dragged, the cards "lean" into the direction of the movement (e.g., rotationY: -15deg during a fast drag).
 - Styling: "Glassmorphism" cards with a 1px border-top highlight to catch the "light."
-- Content: Large-scale serif italic quotes (matching your Hero drama font). The background of each card features a low-opacity, large-scale logo of the client’s company.
+- Content Structure: Large-scale serif italic quotes (matching your Hero drama font). The background of each card features a low-opacity, large-scale logo of the client’s company. 
+- Content: Use the "Our Client Testimonials" section for the content, each subheading is an individual card.
 
-### C. THE "KINETIC CARPET" — "The Interactive Grid"
+
+### D. THE "KINETIC CARPET" — "The Interactive Grid"
 A static grid that feels alive through mouse-tracking and micro-animations.
 
 - Layout: A clean 4x4 or 5x5 grid with gap-px (1px borders) to create a "technical blueprint" look. 
@@ -103,7 +113,7 @@ A static grid that feels alive through mouse-tracking and micro-animations.
 - Interaction Logic: The "Flashlight" Effect. The entire grid is dimmed to opacity-20. As the user moves their cursor, a GSAP-driven radial mask follows the mouse, "lighting up" the logos within a 200px radius to opacity-100.
 - Animation: When a logo enters the "light," it performs a subtle scale(1.05) and a 3D rotationY (5-10 degrees) to give the grid physical depth.
 - Styling: Use your bg-secondary/5 for the grid cells to maintain the "Glassmorphism" theme.
-
+- Content: Use the list of clients under the "Customer Logos" section.
 ---
 
 ## WHY NSERIO page
