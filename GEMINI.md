@@ -80,11 +80,11 @@ Sections will be specified as headings in the file.
 - NOISE & GRAIN — "The Analog Layer"
 An aesthetic treatment to prevent the "flat digital" look.
 - Structure: A fixed inset-0 div with a high z-index and pointer-events-none.
-- Visual: A repeating SVG noise texture at opacity-5.
+- Visual: A repeating SVG noise texture at opacity-10.
 - Animation: A 3-frame GSAP loop that toggles the background-position every 100ms. This creates a subtle "film grain" flicker that makes the Tailwind colors feel more organic and premium.
 
 ### B. Services — "Sticky Stacking Archive"
-3 full-screen cards that stack on scroll.Three cards derived from the 3 services sections ("Design & Consulting","Custom Development","Workflow Automations","Integrations")
+4 full-screen cards that stack on scroll.Three cards derived from the 4 services sub-sections ("Design & Consulting","Custom Development","Workflow Automations","Integrations")
 - **Stacking Interaction:** Using GSAP ScrollTrigger with `pin: true`. As a new card scrolls into view, the card underneath scales to `0.9`, blurs to `20px`, and fades to `0.5`.
 - **Each card gets a unique canvas/SVG animation:**
   1. A slowly rotating geometric motif (double-helix, concentric circles, or gear teeth).
@@ -109,9 +109,9 @@ A horizontal deck of cards that responds to "momentum dragging" rather than simp
 A static grid that feels alive through mouse-tracking and micro-animations.
 
 - Layout: A clean 4x4 or 5x5 grid with gap-px (1px borders) to create a "technical blueprint" look. 
-- 4 black and white logos of our customers
-- Interaction Logic: The "Flashlight" Effect. The entire grid is dimmed to opacity-20. As the user moves their cursor, a GSAP-driven radial mask follows the mouse, "lighting up" the logos within a 200px radius to opacity-100.
-- Animation: When a logo enters the "light," it performs a subtle scale(1.05) and a 3D rotationY (5-10 degrees) to give the grid physical depth.
+- Monochromelogos of our customers
+- Interaction Logic: The "Flashlight" Effect using the (Accent) color. The entire grid is dimmed to opacity-20. As the user moves their cursor, a GSAP-driven radial mask follows the mouse, "lighting up" the logos within a 200px radius to opacity-100.
+- Animation: When a logo enters the "light" it performs a subtle scale(1.05) and a 3D rotationY (5-10 degrees) to give the grid physical depth.
 - Styling: Use your bg-secondary/5 for the grid cells to maintain the "Glassmorphism" theme.
 - Content: Use the list of clients under the "Customer Logos" section.
 ---
