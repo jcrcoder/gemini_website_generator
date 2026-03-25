@@ -68,8 +68,6 @@ A `fixed` pill-shaped container, horizontally centered.
 **IMPORTANT** Use @HOMEPAGE.md file for the content. The different 
 Sections will be specified as headings in the file.
 
-
-
 ### A. HERO SECTION — "The Opening Shot"
 - `100dvh` height. Full-bleed background image (sourced from Unsplash matching preset's `imageMood`) with a heavy **primary-to-black gradient overlay** (`bg-gradient-to-t`).
 - **Layout:** Content pushed to the **bottom-left third** using flex + padding.
@@ -117,20 +115,20 @@ A static grid that feels alive through mouse-tracking and micro-animations.
 ---
 
 ## WHY NSERIO page
-### A. TEXT SCRUBBER — "The Narrative Reveal"
-A high-impact storytelling section where text "lights up" as the user scrolls. [User Testimonials]
-- Typography: Large, high-contrast sans-serif. Centered or justified.
-- Animation Logic: Wrap every word in a <span> using split-type. Set initial state to opacity-10 (or a dimmed color).
-- ScrollTrigger: Use scrub: true. As the user scrolls, the words transition to opacity-100 and the accent color.
-- Visual Hook: A "horizontal scanner" line (1px accent color) that moves down the screen at the same pace as the text illumination.
+**IMPORTANT** Use @WHYNSERIO.md file for the content. The different 
+Sections will be specified as headings in the file.
 
-### B. PHILOSOPHY — "The Manifesto"
-- Full-width section with the **dark color** as background.
-- A parallaxing organic texture image (Unsplash, `imageMood` keywords) at low opacity behind the text.
-- **Typography:** Two contrasting statements. Pattern:
-  - "Most [industry] focuses on: [common approach]." — neutral, smaller.
-  - "We focus on: [differentiated approach]." — massive, drama serif italic, accent-colored keyword.
-- **Animation:** GSAP `SplitText`-style reveal (word-by-word or line-by-line fade-up) triggered by ScrollTrigger.
+### A. Header
+Page header, not a hero header.
+
+### B. PROTOCOL — "Sticky Stacking Archive"
+3 full-screen cards that stack on scroll.
+- **Stacking Interaction:** Using GSAP ScrollTrigger with `pin: true`. As a new card scrolls into view, the card underneath scales to `0.9`, blurs to `20px`, and fades to `0.5`.
+- **Each card gets a unique canvas/SVG animation:**
+  1. A slowly rotating geometric motif (double-helix, concentric circles, or gear teeth).
+  2. A scanning horizontal laser-line moving across a grid of dots/cells.
+  3. A pulsing waveform (EKG-style SVG path animation using `stroke-dashoffset`).
+- Card content: Step number (monospace), title (heading font), based on page's subsection content.
 
 ---
 
