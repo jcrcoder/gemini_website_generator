@@ -54,7 +54,7 @@ These rules apply to ALL presets. They are what make the output premium.
 ### A. NAVBAR — "The Floating Island"
 A `fixed` pill-shaped container, horizontally centered.
 - **Morphing Logic:** Transparent with light text at hero top. Transitions to `bg-[background]/60 backdrop-blur-xl` with primary-colored text and a subtle `border` when scrolled past the hero. Use `IntersectionObserver` or ScrollTrigger.
-- Contains: Logo (brand name as text), 3-4 nav links, CTA button (accent color).
+- Contains: Logo (@nslogo.png), 5 nav links (Home, Why NSerio, Services, CaseFlow, About Us), CTA button (accent color).
 - CTA Links to the CONTACT page
 - NAVBAR menu item text should be visible on all backgrounds, In light pages, the text should be dark, in dark pages, the text should be light when the page is loaded.
 
@@ -120,8 +120,10 @@ Sections will be specified as headings in the file.
 
 ### A. Header
 Page header, not a hero header.
+- **Layout:** Content pushed to the **bottom-left third** using flex + padding.
+- **Typography:** Large scale contrast following the preset's hero line pattern. First part in bold sans heading font. Second part in massive serif italic drama font (3-5x size difference).
 
-### B. PROTOCOL — "Sticky Stacking Archive"
+### B. Services — "Sticky Stacking Archive"
 3 full-screen cards that stack on scroll.
 - **Stacking Interaction:** Using GSAP ScrollTrigger with `pin: true`. As a new card scrolls into view, the card underneath scales to `0.9`, blurs to `20px`, and fades to `0.5`.
 - **Each card gets a unique canvas/SVG animation:**
@@ -133,8 +135,16 @@ Page header, not a hero header.
 ---
 
 ## SERVICES page
-### A. PROTOCOL — "Sticky Stacking Archive"
-3 full-screen cards that stack on scroll.Three cards derived from the user's 3 value propositions. 
+**IMPORTANT** Use @SERVICES.md file for the content. The different 
+Sections will be specified as headings in the file.
+
+### A. Header
+Page header, not a hero header.
+- **Layout:** Content pushed to the **bottom-left third** using flex + padding.
+- **Typography:** Large scale contrast following the preset's hero line pattern. First part in bold sans heading font. Second part in massive serif italic drama font (3-5x size difference).
+
+### B. PROTOCOL — "Sticky Stacking Archive"
+4 full-screen cards that stack on scroll.Four cards derived from the 4 services specified as headings in the @SERVICES.md file. 
 - **Stacking Interaction:** Using GSAP ScrollTrigger with `pin: true`. As a new card scrolls into view, the card underneath scales to `0.9`, blurs to `20px`, and fades to `0.5`.
 - **Each card gets a unique canvas/SVG animation:**
   1. A slowly rotating geometric motif (double-helix, concentric circles, or gear teeth).
@@ -142,6 +152,8 @@ Page header, not a hero header.
   3. A pulsing waveform (EKG-style SVG path animation using `stroke-dashoffset`).
 - Card content: Step number (monospace), title (heading font), 2-line description. Derive from user's brand purpose.
 
+### C. THE "KINETIC DRAG" CAROUSEL — "The Tactile Deck"
+- Same component as in HOME page for client testimonials.
 
 ---
 

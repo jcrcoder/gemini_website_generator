@@ -13,3 +13,5 @@
 !CONTACT.md
 !.gitignore_for_building
 !PageContent/
+!PageContent/**
+!nserio-website/**
