@@ -2,9 +2,9 @@
 
 ## Hero
 
-e-Discovery Development Experts
+_Heading_ e-Discovery Development Experts
 
-NSerio is your one-stop shop for custom e-discovery applications and workflows.
+_Subheading_ NSerio is your one-stop shop for custom e-discovery applications and workflows.
 
 ## Services
 
@@ -32,7 +32,7 @@ Save time and boost productivity by automating your most repetitive workflows.
 
 Our custom solutions have been recognized year over year for improving the lives of legal teams everywhere. _(overwhelm them with award logos)_
 
-## CaseFlow Module
+## CaseFlow
 
 One of our custom applications is now available out of the box. CaseFlow continuously monitors user activity and automatically transitions your cases to different lifecycle stages in Relativity.
 

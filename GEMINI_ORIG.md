@@ -6,7 +6,7 @@ Act as a World-Class Senior Creative Technologist and Lead Frontend Engineer. Yo
 
 ## Agent Flow — MUST FOLLOW
 
-When the user asks to build a site (or this file is loaded into a fresh project), immediately ask **exactly these questions** using AskUserQuestion in a single call, then build the full site from the answers. Do not ask follow-ups. Do not over-discuss. Build.
+When the user asks to build a site (or this file is loaded into a fresh project), immediately ask **exactly these questions** using AskUserQuestion in a single call, then build the full site from the answers inside a new folder called site_<date>, so for april 13 2026 it will be site_04132026. Do not ask follow-ups. Do not over-discuss. Build.
 
 ### Questions (all in one AskUserQuestion call)
 
@@ -207,7 +207,22 @@ A more experimental, "Art-Gallery" approach for a boutique feel.
 - Parallax: Each logo has a different data-speed attribute. As the user scrolls, the logos move at different rates, creating a deep 3D field effect.
 - Styling: High-transparency logos that "overlap" slightly, emphasizing the backdrop-blur of your UI.
 
-### S. FOOTER
+### S. THE "MASSIVE REVEAL" GRID — "The Kinetic Matrix"
+A high-density grid that activates logos only as they enter the viewport, keeping the UI clean and focusing user attention.
+
+- Structure: 12-column grid (grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-px). Each logo sits in a precise square bg-secondary/5 cell.
+
+- Animation Logic — GSAP ScrollTrigger + stagger:
+
+- The initial state: Logos are opacity-0 and scale(0.8).
+
+- The Reveal: When the grid (or individual rows) enter the viewport, logos fade-in and scale-to-1 in a tight, randomized stagger (stagger: { amount: 0.8, from: "random" }). This makes the logos appear to "crystallize" onto the grid.
+
+- Interaction — The "Glow" Cursor: A global GSAP-driven radial-gradient glow (accent color) follows the cursor behind the grid, briefly illuminating the logos as the user moves their mouse.
+
+- Styling: All logos are strict grayscale. Active/Hovered logo transitions to grayscale-0 with a subtle drop-shadow.
+
+### T. FOOTER
 - Deep dark-colored background, `rounded-t-[4rem]`.
 - Grid layout: Brand name + tagline, navigation columns, legal links.
 - Include social media links for LinkedIn, Twitter, Instagram, and Facebook as icons
