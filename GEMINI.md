@@ -54,7 +54,7 @@ These rules apply to ALL presets. They are what make the output premium.
 ### A. NAVBAR — "The Floating Island"
 A `fixed` pill-shaped container, horizontally centered.
 - **Morphing Logic:** Transparent with light text at hero top. Transitions to `bg-[background]/60 backdrop-blur-xl` with primary-colored text and a subtle `border` when scrolled past the hero. Use `IntersectionObserver` or ScrollTrigger.
-- Contains: Logo (@nslogo.png), 5 nav links (Home, Why NSerio, Services, CaseFlow, About Us), CTA button (accent color).
+- Contains: Logo image, use the file @nslogo_dark.png that links to Home, 5 nav links (Home, Why NSerio, Services, CaseFlow, About Us), CTA button (accent color).
 - CTA Links to the CONTACT page
 - NAVBAR menu item text should be visible on all backgrounds, In light pages, the text should be dark, in dark pages, the text should be light when the page is loaded.
 

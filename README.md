@@ -104,7 +104,7 @@ NOTE: Good to start a new conversation for each new website. Otherwise it assume
 - The leaders section is not full screen as it was before, also not changing images as I scroll, it only did it the first time.
 - 
 Kept:
-- Tailwind.config.jr
+- Tailwind.config.js
 - vite.config.js
 - package.json
 - node_modules
