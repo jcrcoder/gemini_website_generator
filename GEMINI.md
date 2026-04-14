@@ -68,17 +68,18 @@ A `fixed` pill-shaped container, horizontally centered.
 - The navbar should be responsive. On mobile, the navbar should be a hamburger menu.
 
 ### B. FOOTER
-- Deep dark-colored background, `rounded-t-[4rem]`.
+- Deep dark-colored background
 - Grid layout: Brand name + tagline, navigation columns, legal links.
 - Include social media links for LinkedIn (https://www.linkedin.com/company/nserio), Instagram (https://www.instagram.com/nserio_devs), and YouTube (https://www.youtube.com/@nserio6994) as icons
 - The footer should be responsive. On mobile, the footer should be a hamburger menu.
 - Include the copyright notice at the bottom of the footer.
-- Include a link to the privacy policy and terms of service.
+- Include a link to the privacy policy.
 
 --
 
 ## Technical Requirements (NEVER CHANGE)
 **IMPORTANT** - Each website is created in its own independent folder. Do not use any shared config files between websites all config files should be contained within the website folder.
+**Vite config** don't use @config, and instead use @source directives (the proper Tailwind v4 way), which work alongside the Vite plugin.
 - **Stack:** React 19, Tailwind CSS v4.2.2 or newer, GSAP 3 (with ScrollTrigger plugin), Lucide React for icons.
 - **Tailwind v4 Integration (CRITICAL):** When scaffolding Vite apps in a sub-folder/monorepo, v4's implicit scanning often fails, treating the layout as un-styled. To prevent this, ALWAYS scaffold a local `tailwind.config.js` containing precise glob boundaries (e.g., `content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"]`), and then explicitly inject it directly into the project's CSS file via `@config "../tailwind.config.js";`. Do NOT rely purely on automated v4 discovery.
 - **Fonts:** Load via Google Fonts `<link>` tags in `index.html` based on the selected preset.
@@ -100,6 +101,7 @@ A `fixed` pill-shaped container, horizontally centered.
 **Execution Directive:** "Do not build a website; build a digital instrument. Every scroll should feel intentional, every animation should feel weighted and professional. Eradicate all generic AI patterns."
 
 ---
+
 
 # Git Repository
 **IMPORTANT: Never modify core GEMINI.md or README.md unless explicitly asked.**

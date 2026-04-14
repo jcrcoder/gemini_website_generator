@@ -13,13 +13,13 @@ An aesthetic treatment to prevent the "flat digital" look.
 - Visual: A repeating SVG noise texture at opacity-10.
 - Animation: A 3-frame GSAP loop that toggles the background-position every 100ms. This creates a subtle "film grain" flicker that makes the Tailwind colors feel more organic and premium.
 
-
-
+**important**  use the text heading and subheading only do not add any other text to this hero section
 _Heading_ e-Discovery Development Experts
 
 _Subheading_ NSerio is your one-stop shop for custom e-discovery applications and workflows.
 
-## Services "The Manifesto"
+## Services
+- "The Manifesto"
 - Full-width section with the **dark color** as background.
 - A parallaxing organic texture image (Unsplash, `imageMood` keywords) at low opacity behind the text.
 
@@ -27,11 +27,13 @@ _Subheading_ NSerio is your one-stop shop for custom e-discovery applications an
 
 We build best-in-class custom applications, integrations, and automated workflows on Relativity. Our engineering practice has fully embraced agentic AI — not as a shortcut, but as a force multiplier. We still design the architecture, own the software development lifecycle, and deliver with the rigor your mission-critical workflows demand. The result: faster delivery, smarter solutions, and outcomes legal teams can rely on.
 
-## Our Services "Sticky Stacking Archive"
+## Our Services 
+- "Sticky Stacking Archive"
 - 4  full-screen cards that stack on scroll. Cards derived from each of the services sub-sections ("Design & Consulting","Custom Development","Workflow Automations","Integrations")
 - **Stacking Interaction:** Using GSAP ScrollTrigger with `pin: true`. As a new card scrolls into view, the card underneath scales to `0.9`, blurs to `20px`, and fades to `0.5`.
 - **Each card gets a unique canvas/SVG animation:**
 - The SVG animation should be large and animated and should be on the right side of the card.
+-Animaion should loop and be responsive to mouse. 
 
 - Card content: section title (heading font), 2-line description. canvas/SVG animation on the right side of the card.
 

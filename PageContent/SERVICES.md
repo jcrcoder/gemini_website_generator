@@ -8,11 +8,14 @@ Got an e-discovery challenge and not sure where to start? We have your back.
 
 ## Design & Consulting
 
-_Main content / details section – image of a prototype or something representing design work next to this text would be great_
+_Main content / details section – animation on the right_
+_animation_ canvas / SVG animation:  Animate a series of overlapping semi-transparent strokes that rotate and converge into a single, perfectly aligned geometric shape to represent the clarity and focus brought by strategic design and expert consulting. Animaion should loop and be responsive to mouse. 
 
 An engagement with NSerio isn't just gather requirements and go – it's about understanding the problem, working together on the best possible solution, and then creating a design that works for all stakeholders. We work smarter, not harder, by following a process that ensures we start with the right information at the right time.
 
 _(insert workflow diagram using the following text)_
+
+_icons_ Include a relevant lucide icon for each section
 
 **Understand:** We ask questions and learn your specific challenges and requirements to ensure we're focused on the right problem.
 
@@ -24,7 +27,8 @@ _(insert workflow diagram using the following text)_
 
 ## Custom Development
 
-_Header – image with the following text next to it_
+_Header – canvas/svg animation following text next to it_
+_animation_ Trace a single, right-angled SVG path across a rigid grid that triggers the staggered "pop-in" of geometric module blocks to simulate the architectural assembly of a custom application. Animaion should loop and be responsive to mouse. 
 
 Bring your applications to life without spinning up a new team.
 
@@ -40,7 +44,8 @@ _(2-3 examples of custom applications go here: include 1-2 lines about the appli
 
 ## Integrations
 
-_Header – image with the following text next to it_
+_Header – canvas/svg animation following text next to it_
+_animation_ Animate two monolithic blocks snapping together via parallel horizontal tracks that facilitate a rhythmic, bidirectional flow of geometric "data packets" to symbolize seamless synchronization.Animaion should loop and be responsive to mouse. 
 
 Connect Relativity to systems that add functionality to your workflows and eliminate risky data transfers.
 
@@ -61,7 +66,8 @@ By bridging Relativity with databases, cloud storage, CRMs, and more, you can ha
 
 ## Workflow Automations
 
-_Header – image with the following text next to it_
+_Header – canvas/svg animation following text next to it_
+_animation_ Animate a chaotic scatter of geometric squares into a rigid linear sequence via a high-speed expo.inOut transition, followed by a single synchronized pulse that flows through the line to signify the transition from manual repetition to automated efficiency.Animaion should loop and be responsive to mouse.
 
 Stop wasting time on repetitive manual workflows and get straight to the heart of your matter.
 
