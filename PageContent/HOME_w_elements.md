@@ -27,11 +27,11 @@ _Subheading_ NSerio is your one-stop shop for custom e-discovery applications an
   - "We focus on: [differentiated approach]." — massive, drama serif italic, accent-colored keyword.
 - **Animation:** GSAP `SplitText`-style reveal (word-by-word or line-by-line fade-up) triggered by ScrollTrigger.
 
-We build best-in-class custom applications, integrations, and automated workflows on Relativity that eliminate manual work, accelerate case timelines, and reliably deliver outcomes for legal teams.
+We build best-in-class custom applications, integrations, and automated workflows on Relativity. Our engineering practice has fully embraced agentic AI — not as a shortcut, but as a force multiplier. We still design the architecture, own the software development lifecycle, and deliver with the rigor your mission-critical workflows demand. The result: faster delivery, smarter solutions, and outcomes legal teams can rely on.
 
 ## Our Services "Sticky Stacking Archive"
 _heading_ Our Services
-- several full-screen cards that stack on scroll. Cards derived from each of the services sub-sections ("Design & Consulting","Custom Development","Workflow Automations","Integrations")
+- 4  full-screen cards that stack on scroll. Cards derived from each of the services sub-sections ("Design & Consulting","Custom Development","Workflow Automations","Integrations")
 - **Stacking Interaction:** Using GSAP ScrollTrigger with `pin: true`. As a new card scrolls into view, the card underneath scales to `0.9`, blurs to `20px`, and fades to `0.5`.
 - **Each card gets a unique canvas/SVG animation:**
 - The SVG animation should be large and animated and should be on the right side of the card.
@@ -41,49 +41,22 @@ _heading_ Our Services
 ### Design & Consulting
 Share your biggest operational challenges and we'll craft solutions that work for you.
 _animation_   
-- Challenge Cluster (Left): A cloud of organic nodes drifting in soft, non-linear motion, representing the "operational challenges" clients face.
-- The Bridge: Elegant connection strands reach across the space. I've added GSAP-powered data pulses that travel along these paths, shifting from the Mycelium (#4DB35A) "organic" green to the Ember (#E8551F) "active" accent.
-- Solution Structure (Right): A rigid, glowing architectural grid where the strands lock into place, representing the "crafted solutions."
-- Cinematic Feel: The order nodes "breathe" with a subtle scale and opacity animation, giving the interface a living, professional weigh
+Animate a series of overlapping semi-transparent strokes that rotate and converge into a single, perfectly aligned geometric shape to represent the clarity and focus brought by strategic design and expert consulting.
 
 ### Custom Development
 Bring your applications to life without the startup costs and get the most out of your e-discovery investments.
 _animation_   
-A generative "architectural assembly" representing custom software construction.
-- Visuals: A high-contrast, 2px stroke-width SVG layout on a rigid 20px grid. Features 4-5 geometric "module" blocks (nodes) connected by a single, continuous right-angled path (the "thread").
-- Action: * The Trace: GSAP DrawSVG animates the connector path from 0 to 100% following the scroll-stack trigger.The Pop: As the path hits each node, the node scales from $0 \to 1.1 \to 1.0$ with a back.out ease.
-- The Pulse: Once assembled, nodes undergo a subtle, staggered opacity breath (0.7 to 1.0) using a Canvas-based flickering pixel-fill to simulate "active" data.
-- Style: No gradients, no shadows. Monochromatic or single-accent color. Execution must feel engineered, not decorative.
+Trace a single, right-angled SVG path across a rigid grid that triggers the staggered "pop-in" of geometric module blocks to simulate the architectural assembly of a custom application.
 
 ### Integrations
 We'll help you connect Relativity to your most important systems for a more seamless flow of data.
 _animation_ 
-A "high-speed data conduit" showing seamless bidirectional flow between two monolithic entities.
-
-- Visuals: Two bold, static "Brutalist" pillars on opposite sides of the screen (representing Relativity and External Systems). Between them, a series of 5–8 parallel horizontal lines acting as "data tracks."
-
-- Action: * The Connection: Upon scroll-trigger, the horizontal tracks extend from both pillars and meet perfectly in the center with a "locking" mechanical snap.
-
-- The Flow: Once connected, "data packets" (small, high-contrast squares or short dashes) slide rapidly along the tracks. Use GSAP stagger to create a continuous, rhythmic movement from left-to-right and right-to-left.
-
-- The Sync: Every 2 seconds, all tracks flash or "pulse" in unison to signify a successful handshake/sync.
-
-- Style: Minimalist. Use heavy stroke weights (3px+). Avoid curves—use 45° or 90° angles for any transitions.
+Animate two monolithic blocks snapping together via parallel horizontal tracks that facilitate a rhythmic, bidirectional flow of geometric "data packets" to symbolize seamless synchronization.
 
 ### Workflow Automations
 Save time and boost productivity by automating your most repetitive workflows.
 _animation_  
-A chaotic, staggered process transforming into a synchronized, linear operation, visually demonstrating complexity turning into simplicity.
-
-- Visuals: Initially, a fragmented "matrix" of 9–12 small, misaligned Brutalist squares scattered randomly in the top-left quadrant. Each square has a subtle "error" flicker.
-
-- Action: The Order: On scroll-trigger, the scattered squares rapidly animate (GSAP .to()) into a perfect, tight linear sequence (a single horizontal row) in the center of the screen.
-
-- The Flow: Once lined up, a single, smooth "energy pulse" passes through the entire sequence.
-
-- The Output: The linear sequence slides off-screen to the right, and is replaced by a single, large, pulsating "completion" checkmark or "productivity upward arrow" that scales up.
-
-- Style: High-contrast, monochromatic. All movements use sharp, non-linear eases (e.g., expo.inOut) to emphasize mechanical speed. Maintain the rigid 20px grid alignment.
+Animate a chaotic scatter of geometric squares into a rigid linear sequence via a high-speed expo.inOut transition, followed by a single synchronized pulse that flows through the line to signify the transition from manual repetition to automated efficiency
 
 ## Awards & Recognitions
 

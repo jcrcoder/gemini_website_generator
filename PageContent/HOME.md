@@ -8,7 +8,7 @@ _Subheading_ NSerio is your one-stop shop for custom e-discovery applications an
 
 ## Services
 
-We build best-in-class custom applications, integrations, and automated workflows on Relativity that eliminate manual work, accelerate case timelines, and reliably deliver outcomes for legal teams.
+We build best-in-class custom applications, integrations, and automated workflows on Relativity. Our engineering practice has fully embraced agentic AI — not as a shortcut, but as a force multiplier. We still design the architecture, own the software development lifecycle, and deliver with the rigor your mission-critical workflows demand. The result: faster delivery, smarter solutions, and outcomes legal teams can rely on.
 
 ## Our Services
 
