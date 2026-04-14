@@ -50,8 +50,14 @@ These rules apply to ALL presets. They are what make the output premium.
 ---
 
 # ALL PAGES
-**IMPORTANT** Each page will have a corresponding .md file in the PageContent folder for the content. The different 
-Sections will be specified as h2 headings in the file. 
+**IMPORTANT** Each page will have a corresponding .md file in the PageContent folder for the content. The different Sections will be specified as h2 headings in each the files. 
+**Pages** - pages are inside de PageContent folder:
+@Home.md
+@WhyNserio.md
+@Services.md
+@CaseFlow.md
+@AboutUs.md
+@contact.md
 
 ### A. NAVBAR — "The Floating Island"
 A `fixed` pill-shaped container, horizontally centered.
@@ -69,40 +75,10 @@ A `fixed` pill-shaped container, horizontally centered.
 - Include the copyright notice at the bottom of the footer.
 - Include a link to the privacy policy and terms of service.
 
-
-
-## CONTACT
-### A. THE "CONVERSATIONAL" INTAKE — "The Human Protocol"
-- A minimalist, full-screen or high-bleed section that treats the contact form as a piece of clean editorial design.
-- Fields in order: Name, Company, Additional Details, Email
-- Layout: max-w-4xl centered. No visible input boxes or borders by default—only high-contrast typography and "underlined" interactive spans.
-- Should fit inside a standard 1080p screen
-- Placeholders should be empty
-- Typography: The form is presented as a cohesive paragraph.
-- Standard Text: text-muted or opacity-60 sans-serif.
-- Interactive Fields: Massive, bold sans-serif (matching Hero Section "First Part") with a 1px bottom-border accent.
-Interaction Logic:
-- The "Active" State: When a field is focused, the underline expands (GSAP scaleX: 1.1) and changes to the accent color.
-- Floating Label: As the user types, a small monospace label (e.g., "YOUR NAME") floats above the text in a subtle, staggered fade-up animation.
-- Validation: If a field is missed, the underline "shakes" (GSAP x: [-5, 5, 0]) and turns a muted red.
-
-### B. THE "SECTOR" SELECTOR — "The Choice Matrix"
-- Instead of a standard dropdown menu for "Reason for Contacting," use a kinetic button grid.
-- Visuals: "Custom Development", "CaseFlow", "Integration", "Other" - small pill-shaped buttons (border, rounded-full, px-6 py-2).
-- Interaction: Toggle State. When clicked, the button fills with the primary color and the text "inverts" to the background color using a GSAP flip or scale transition.
-- Logic: These selections update a hidden "Subject" field in the React 19 form state.
-
-### C. THE "SEND" SEQUENCE — "The Transmission"
-The submit button is not a static box; it is an animated event.
-- Visuals: A large, circular CTA (Accent Color) in the bottom-right of the form.
-- Animation: - Hover: The circle expands slightly, and a "Magnetic" effect pulls the "Send" text toward the cursor.
-- Submit: On click, the button morphs into a horizontal progress bar (matching Navbar morphing logic).
-- Success: Once sent, the entire form fades out (GSAP y: -20, opacity: 0) and is replaced by a single, massive Drama Serif Italic "Thank You" or "Signal Received" message. 
-
 --
 
 ## Technical Requirements (NEVER CHANGE)
-
+**IMPORTANT** - Each website is created in its own independent folder. Do not use any shared config files between websites all config files should be contained within the website folder.
 - **Stack:** React 19, Tailwind CSS v4.2.2 or newer, GSAP 3 (with ScrollTrigger plugin), Lucide React for icons.
 - **Tailwind v4 Integration (CRITICAL):** When scaffolding Vite apps in a sub-folder/monorepo, v4's implicit scanning often fails, treating the layout as un-styled. To prevent this, ALWAYS scaffold a local `tailwind.config.js` containing precise glob boundaries (e.g., `content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"]`), and then explicitly inject it directly into the project's CSS file via `@config "../tailwind.config.js";`. Do NOT rely purely on automated v4 discovery.
 - **Fonts:** Load via Google Fonts `<link>` tags in `index.html` based on the selected preset.
@@ -120,7 +96,9 @@ The submit button is not a static box; it is an animated event.
 3. Scaffold the project: `npm create vite@latest`, install deps, write all files.
 4. Ensure every animation is wired, every interaction works, every image loads.
 
+
 **Execution Directive:** "Do not build a website; build a digital instrument. Every scroll should feel intentional, every animation should feel weighted and professional. Eradicate all generic AI patterns."
+
 ---
 
 # Git Repository
