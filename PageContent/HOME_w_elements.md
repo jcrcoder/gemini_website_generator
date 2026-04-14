@@ -48,15 +48,42 @@ _animation_
 
 ### Custom Development
 Bring your applications to life without the startup costs and get the most out of your e-discovery investments.
-_animation_   2. A scanning horizontal laser-line moving across a grid of dots/cells.
+_animation_   
+A generative "architectural assembly" representing custom software construction.
+- Visuals: A high-contrast, 2px stroke-width SVG layout on a rigid 20px grid. Features 4-5 geometric "module" blocks (nodes) connected by a single, continuous right-angled path (the "thread").
+- Action: * The Trace: GSAP DrawSVG animates the connector path from 0 to 100% following the scroll-stack trigger.The Pop: As the path hits each node, the node scales from $0 \to 1.1 \to 1.0$ with a back.out ease.
+- The Pulse: Once assembled, nodes undergo a subtle, staggered opacity breath (0.7 to 1.0) using a Canvas-based flickering pixel-fill to simulate "active" data.
+- Style: No gradients, no shadows. Monochromatic or single-accent color. Execution must feel engineered, not decorative.
 
 ### Integrations
 We'll help you connect Relativity to your most important systems for a more seamless flow of data.
-_animation_   3. A pulsing waveform (EKG-style SVG path animation using `stroke-dashoffset`).
+_animation_ 
+A "high-speed data conduit" showing seamless bidirectional flow between two monolithic entities.
+
+- Visuals: Two bold, static "Brutalist" pillars on opposite sides of the screen (representing Relativity and External Systems). Between them, a series of 5–8 parallel horizontal lines acting as "data tracks."
+
+- Action: * The Connection: Upon scroll-trigger, the horizontal tracks extend from both pillars and meet perfectly in the center with a "locking" mechanical snap.
+
+- The Flow: Once connected, "data packets" (small, high-contrast squares or short dashes) slide rapidly along the tracks. Use GSAP stagger to create a continuous, rhythmic movement from left-to-right and right-to-left.
+
+- The Sync: Every 2 seconds, all tracks flash or "pulse" in unison to signify a successful handshake/sync.
+
+- Style: Minimalist. Use heavy stroke weights (3px+). Avoid curves—use 45° or 90° angles for any transitions.
 
 ### Workflow Automations
 Save time and boost productivity by automating your most repetitive workflows.
-_animation_   4. A weveave of network with nodes that light up as they move through the web.
+_animation_  
+A chaotic, staggered process transforming into a synchronized, linear operation, visually demonstrating complexity turning into simplicity.
+
+- Visuals: Initially, a fragmented "matrix" of 9–12 small, misaligned Brutalist squares scattered randomly in the top-left quadrant. Each square has a subtle "error" flicker.
+
+- Action: The Order: On scroll-trigger, the scattered squares rapidly animate (GSAP .to()) into a perfect, tight linear sequence (a single horizontal row) in the center of the screen.
+
+- The Flow: Once lined up, a single, smooth "energy pulse" passes through the entire sequence.
+
+- The Output: The linear sequence slides off-screen to the right, and is replaced by a single, large, pulsating "completion" checkmark or "productivity upward arrow" that scales up.
+
+- Style: High-contrast, monochromatic. All movements use sharp, non-linear eases (e.g., expo.inOut) to emphasize mechanical speed. Maintain the rigid 20px grid alignment.
 
 ## Awards & Recognitions
 
