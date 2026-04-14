@@ -19,11 +19,13 @@ _Heading_ e-Discovery Development Experts
 _Subheading_ NSerio is your one-stop shop for custom e-discovery applications and workflows.
 
 ## Services
-- "The Manifesto"
-- Full-width section with the **dark color** as background.
-- A parallaxing organic texture image (Unsplash, `imageMood` keywords) at low opacity behind the text.
+"The Narrative Reveal"
+A high-impact storytelling section where text "lights up" as the user scrolls. [User Testimonials]
+- Typography: Large, high-contrast sans-serif. Centered or justified.
+- Animation Logic: Wrap every word in a <span> using split-type. Set initial state to opacity-10 (or a dimmed color).
+- ScrollTrigger: Use scrub: true. As the user scrolls, the words transition to opacity-100 and the accent color.
+- Visual Hook: A "horizontal scanner" line (1px accent color) that moves down the screen at the same pace as the text illumination.
 
-- **Animation:** GSAP `SplitText`-style reveal (word-by-word or line-by-line fade-up) triggered by ScrollTrigger.
 
 We build best-in-class custom applications, integrations, and automated workflows on Relativity. Our engineering practice has fully embraced agentic AI — not as a shortcut, but as a force multiplier. We still design the architecture, own the software development lifecycle, and deliver with the rigor your mission-critical workflows demand. The result: faster delivery, smarter solutions, and outcomes legal teams can rely on.
 
@@ -55,7 +57,7 @@ _animation_
 ### Workflow Automations
 Save time and boost productivity by automating your most repetitive workflows.
 _animation_  
-4. Animate a chaotic scatter of geometric squares into a rigid linear sequence via a high-speed expo.inOut transition, followed by a single synchronized pulse that flows through the line to signify the transition from manual repetition to automated efficiency
+4. Animate a chaotic scatter of geometric squares into a rigid symetrical, linear sequence via a high-speed expo.inOut transition, followed by a single synchronized pulse that flows through the line to signify the transition from manual Disorder to automated efficiency.
 
 ## Awards & Recognitions
 
