@@ -41,22 +41,22 @@ _heading_ Our Services
 ### Design & Consulting
 Share your biggest operational challenges and we'll craft solutions that work for you.
 _animation_   
-Animate a series of overlapping semi-transparent strokes that rotate and converge into a single, perfectly aligned geometric shape to represent the clarity and focus brought by strategic design and expert consulting.
+1. Animate a series of overlapping semi-transparent strokes that rotate and converge into a single, perfectly aligned geometric shape to represent the clarity and focus brought by strategic design and expert consulting.
 
 ### Custom Development
 Bring your applications to life without the startup costs and get the most out of your e-discovery investments.
 _animation_   
-Trace a single, right-angled SVG path across a rigid grid that triggers the staggered "pop-in" of geometric module blocks to simulate the architectural assembly of a custom application.
+2. Trace a single, right-angled SVG path across a rigid grid that triggers the staggered "pop-in" of geometric module blocks to simulate the architectural assembly of a custom application.
 
 ### Integrations
 We'll help you connect Relativity to your most important systems for a more seamless flow of data.
 _animation_ 
-Animate two monolithic blocks snapping together via parallel horizontal tracks that facilitate a rhythmic, bidirectional flow of geometric "data packets" to symbolize seamless synchronization.
+3. Animate two monolithic blocks snapping together via parallel horizontal tracks that facilitate a rhythmic, bidirectional flow of geometric "data packets" to symbolize seamless synchronization.
 
 ### Workflow Automations
 Save time and boost productivity by automating your most repetitive workflows.
 _animation_  
-Animate a chaotic scatter of geometric squares into a rigid linear sequence via a high-speed expo.inOut transition, followed by a single synchronized pulse that flows through the line to signify the transition from manual repetition to automated efficiency
+4. Animate a chaotic scatter of geometric squares into a rigid linear sequence via a high-speed expo.inOut transition, followed by a single synchronized pulse that flows through the line to signify the transition from manual repetition to automated efficiency
 
 ## Awards & Recognitions
 
@@ -120,17 +120,13 @@ A component that mimics a Slack or Discord DM thread, making the testimony feel 
 
 _client testimonials_ 
 ### Phil Saunders - Relativity CEO
-
 - NSerio has proven to be a trusted partner by consistently delivering customer-ready applications that extend our platform in meaningful, real-world ways. Their ability to translate complex needs into practical, scalable solutions makes them an invaluable part of our ecosystem.
 
 ### Jon Lavinder - Senior Director of Product Management
-
 - After comparing options, I decided to go with NSerio to develop the app. Their level of talent and knowldege is extremely high and allowed us to smoothly build and deploy on-time and within budget.
 
 ### Jim Design - Foley & Lardner Director of Lit Support
-
 - These guys are just amazing at what they do. They are always ready to support us.
 
 ### Adam Smith - Troutman Sanders & Pepper VP of Client Services
-
 - The impact we've had on our clients and our business as a result of the applications we've built with NSerio is invaluable.

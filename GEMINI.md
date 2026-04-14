@@ -16,7 +16,7 @@ When the user asks to build a site (or this file is loaded into a fresh project)
 ---
 
 ## Aesthetic Preset
-Responsiveness: The website is intended for both desktop and mobile use. It should be responsive. 
+Responsiveness: The website is intended for both desktop and mobile use. It should be responsive on all devices. 
 Defines: `palette`, `typography`, `identity` (the overall feel), and `imageMood` (Unsplash search keywords for hero/texture images).
 
 ### "Organic Tech" (Clinical Boutique)
@@ -45,6 +45,7 @@ These rules apply to ALL presets. They are what make the output premium.
 - Use `gsap.context()` within `useEffect` for ALL animations. Return `ctx.revert()` in the cleanup function.
 - Default easing: `power3.out` for entrances, `power2.inOut` for morphs.
 - Stagger value: `0.08` for text, `0.15` for cards/containers.
+- **GSAP ScrollTrigger Layout Rules:** When stacking or pinning overlapping cards dynamically, NEVER use CSS `position: sticky`. ALWAYS use GSAP's native `pin: true` combined with `pinSpacing: false` on the target elements, layering them cleanly via CSS `zIndex`. Mixing CSS sticky bindings with dynamic ScrollTrigger calculations guarantees layout bleeding and viewport overlaps.
 
 ---
 
@@ -58,11 +59,15 @@ A `fixed` pill-shaped container, horizontally centered.
 - Contains: Logo image, use the file @nslogo_dark.png and @nslogo_light.png depending on the page background color, that links to Home, 5 nav links (Home, Why NSerio, Services, CaseFlow, About Us), CTA button (accent color).
 - CTA Links to the CONTACT page
 - NAVBAR menu item text should be visible on all backgrounds, In light pages, the text should be dark, in dark pages, the text should be light when the page is loaded.
+- The navbar should be responsive. On mobile, the navbar should be a hamburger menu.
 
 ### B. FOOTER
 - Deep dark-colored background, `rounded-t-[4rem]`.
 - Grid layout: Brand name + tagline, navigation columns, legal links.
 - Include social media links for LinkedIn (https://www.linkedin.com/company/nserio), Instagram (https://www.instagram.com/nserio_devs), and YouTube (https://www.youtube.com/@nserio6994) as icons
+- The footer should be responsive. On mobile, the footer should be a hamburger menu.
+- Include the copyright notice at the bottom of the footer.
+- Include a link to the privacy policy and terms of service.
 
 
 
@@ -99,6 +104,7 @@ The submit button is not a static box; it is an animated event.
 ## Technical Requirements (NEVER CHANGE)
 
 - **Stack:** React 19, Tailwind CSS v4.2.2 or newer, GSAP 3 (with ScrollTrigger plugin), Lucide React for icons.
+- **Tailwind v4 Integration (CRITICAL):** When scaffolding Vite apps in a sub-folder/monorepo, v4's implicit scanning often fails, treating the layout as un-styled. To prevent this, ALWAYS scaffold a local `tailwind.config.js` containing precise glob boundaries (e.g., `content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"]`), and then explicitly inject it directly into the project's CSS file via `@config "../tailwind.config.js";`. Do NOT rely purely on automated v4 discovery.
 - **Fonts:** Load via Google Fonts `<link>` tags in `index.html` based on the selected preset.
 - **Images:** Use real Unsplash URLs. Select images matching the preset's `imageMood`. Never use placeholder URLs.
 - **File structure:** Single `App.jsx` with components defined in the same file (or split into `components/` if >600 lines). Single `index.css` for Tailwind directives + noise overlay + custom utilities.
