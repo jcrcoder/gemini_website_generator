@@ -13,6 +13,8 @@ An aesthetic treatment to prevent the "flat digital" look.
 - Visual: A repeating SVG noise texture at opacity-10.
 - Animation: A 3-frame GSAP loop that toggles the background-position every 100ms. This creates a subtle "film grain" flicker that makes the Tailwind colors feel more organic and premium.
 
+
+
 _Heading_ e-Discovery Development Experts
 
 _Subheading_ NSerio is your one-stop shop for custom e-discovery applications and workflows.
@@ -29,7 +31,7 @@ We build best-in-class custom applications, integrations, and automated workflow
 
 ## Our Services "Sticky Stacking Archive"
 _heading_ Our Services
-- 4 full-screen cards that stack on scroll.Three cards derived from the 4 services sub-sections ("Design & Consulting","Custom Development","Workflow Automations","Integrations")
+- several full-screen cards that stack on scroll. Cards derived from each of the services sub-sections ("Design & Consulting","Custom Development","Workflow Automations","Integrations")
 - **Stacking Interaction:** Using GSAP ScrollTrigger with `pin: true`. As a new card scrolls into view, the card underneath scales to `0.9`, blurs to `20px`, and fades to `0.5`.
 - **Each card gets a unique canvas/SVG animation:**
 - The SVG animation should be large and animated and should be on the right side of the card.
@@ -37,19 +39,22 @@ _heading_ Our Services
 - Card content: section title (heading font), 2-line description. canvas/SVG animation on the right side of the card.
 
 ### Design & Consulting
-
 Share your biggest operational challenges and we'll craft solutions that work for you.
-_animation_   1. A slowly rotating geometric motif ( gear teeth).
-### Custom Development
+_animation_   
+- Challenge Cluster (Left): A cloud of organic nodes drifting in soft, non-linear motion, representing the "operational challenges" clients face.
+- The Bridge: Elegant connection strands reach across the space. I've added GSAP-powered data pulses that travel along these paths, shifting from the Mycelium (#4DB35A) "organic" green to the Ember (#E8551F) "active" accent.
+- Solution Structure (Right): A rigid, glowing architectural grid where the strands lock into place, representing the "crafted solutions."
+- Cinematic Feel: The order nodes "breathe" with a subtle scale and opacity animation, giving the interface a living, professional weigh
 
+### Custom Development
 Bring your applications to life without the startup costs and get the most out of your e-discovery investments.
 _animation_   2. A scanning horizontal laser-line moving across a grid of dots/cells.
-### Integrations
 
+### Integrations
 We'll help you connect Relativity to your most important systems for a more seamless flow of data.
 _animation_   3. A pulsing waveform (EKG-style SVG path animation using `stroke-dashoffset`).
-### Workflow Automations
 
+### Workflow Automations
 Save time and boost productivity by automating your most repetitive workflows.
 _animation_   4. A weveave of network with nodes that light up as they move through the web.
 
@@ -87,6 +92,8 @@ A high-density grid that activates logos only as they enter the viewport, keepin
 
 - Use all of the files in the PageContent/client_logos. Use the company name as the alt text for each logo. e.g. if the file is "acme_corp.png" the alt text should be "Acme Corp".
 
+- Rounded corners for all logos
+
 - Structure: 12-column grid (grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-px). Each logo sits in a precise square bg-secondary/5 cell.
 
 - Animation Logic — GSAP ScrollTrigger + stagger:
@@ -106,19 +113,19 @@ What our clients say about us
 _Testimonial Component_
 A component that mimics a Slack or Discord DM thread, making the testimony feel like a real-time conversation.
 
-- Logic: As the user scrolls into view, "messages" (testimonies) pop in one by one with a "typing..." indicator that lasts 0.5s to 1.0s.
+- Logic: As the user scrolls into view, "messages" (testimonies) pop in one by one with a "typing..." indicator that lasts 0.5s to 1.0s at random to feel natural.
 - Animation: A slight y: 20 bounce as each message appears.
 - Visuals: Dark mode "bubbles" with the accent color used for the client's name. A "Recently Sent" pulsing green dot in the corner of the component.
-- Purpose: Best for "Modern/SaaS" brands to show that clients are currently active and happy.
+
 
 _client testimonials_ 
 ### Phil Saunders - Relativity CEO
 
 - NSerio has proven to be a trusted partner by consistently delivering customer-ready applications that extend our platform in meaningful, real-world ways. Their ability to translate complex needs into practical, scalable solutions makes them an invaluable part of our ecosystem.
 
-### Jack Smith - Lawfirm 1 LLP Partner
+### Jon Lavinder - Senior Director of Product Management
 
-- NSerio is a partner we trust—they consistently turn real-world challenges into practical, impactful solutions on our platform.
+- After comparing options, I decided to go with NSerio to develop the app. Their level of talent and knowldege is extremely high and allowed us to smoothly build and deploy on-time and within budget.
 
 ### Jim Design - Foley & Lardner Director of Lit Support
 
