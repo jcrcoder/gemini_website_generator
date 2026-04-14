@@ -36,6 +36,7 @@ A pinned-scroll section that feels like a high-end fashion or tech magazine.
 - Morphing should work scrolling up or down smoothly.
 - The "Mask" Effect: Use a GSAP clip-path animation (e.g., a circle expanding or a diagonal wipe) to transition between portraits.
 - Typography: Use your Drama Serif Italic for the leader's name and a tight Sans-Bold for their "Philosophy" or "Mission Statement" quote within the bio.
+- Delete her images should be black and white by adding a grayscale filter to the image.
 
 **Juan Ramirez | Founder & CEO**
 *profile imange:* @lead_Juan.png
