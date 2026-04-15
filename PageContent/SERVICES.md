@@ -38,7 +38,20 @@ Our team is equipped to bring your e-discovery visions to life. We use proven me
 
 Here are just a few examples of custom applications we've built:
 
-_(2-3 examples of custom applications go here: include 1-2 lines about the application and a screenshot)_
+_example1_ 
+### Bricker & Eckler - Land Tracker
+Bricker & Eckler used Relativity to build a solution for a natural gas distributor in the process of developing an interstate pipeline to organize information related to thousands of real estate documents and manage the data of multiple landowners, tracts, and lawsuits. The user-friendly system compiles documents from a variety of sources, even creating litigation documents with the click of a button.
+_image_ https://relativityfest.com/relativityfest/images/innovation-awards/2017/bricker.jpg
+
+_example2_ 
+### CDS Vision Financial Analysis
+CDS Vision Financial Analysis transforms structured financial data, often trapped in database and excel files, into individually analyzable components within Relativity – enabling users to filter and visualize millions of transactions by dates, entities, locations, and values with enhanced precision. By integrating generative AI for entity extraction and summarization, the solution streamlines investigations across complex datasets, significantly improving efficiency for clients such as financial investigators.
+_image_ https://www.relativityfest.com/relativityfest/images/innovation-awards/2025/screenshots/CDS-vision-financial-analysis.jpg
+
+_example3_ 
+### Unitad Zeteo
+Given the complexity and sheer magnitude of the data involved in UNITAD’s mandate, the team has sought ways to leverage the latest technology. More than half of digital evidence collected is in video and image formats and nearly all text and audio is in Arabic, which needs to be translated for investigators, analysts, and for use in criminal proceedings. Working with a team of technology experts fully engaged in creating a cutting-edge solution, UNITAD developed Zeteo, a custom enrichment pipeline for electronic data using the latest in artificial intelligence, Microsoft cognitive services, machine learning, facial recognition and identification, machine translation, and image analysis. Zeteo, which roughly translated means “to seek and reveal,” is a powerful system that learns more and makes more connections the more data it is fed.
+_image_ https://relativity.com/relativity/assets/Image/Zeteo.PNG
 
 [Testimonial module – specific to custom development]
 
