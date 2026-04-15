@@ -2,7 +2,13 @@
 
 ## Header
 
-_Background image with text on the side_
+_Background image with page title_
+
+A high-impact storytelling section where text "lights up" as the user scrolls. [User Testimonials]
+- Typography: Large, high-contrast sans-serif. Centered or justified.
+- Animation Logic: Wrap every word in a <span> using split-type. Set initial state to opacity-10 (or a dimmed color).
+- ScrollTrigger: Use scrub: true. As the user scrolls, the words transition to opacity-100 and the accent color.
+- Visual Hook: A "horizontal scanner" line (1px accent color) that moves down the screen at the same pace as the text illumination.
 
 e-Discovery is complex, and tools like Relativity are built to be extensible — but unlocking that extensibility requires more than development skill. It requires deep domain knowledge, disciplined engineering, and the judgment to know when technology serves the work and when it gets in the way. At NSerio, we combine nearly 15 years of Relativity expertise with a fully agentic engineering practice — meaning we bring experienced engineers, not just AI tools, to every engagement. We design the infrastructure, own the full software development lifecycle, and use AI as a force multiplier to deliver better outcomes faster.
 

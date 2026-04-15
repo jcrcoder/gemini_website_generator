@@ -59,10 +59,12 @@ These rules apply to ALL presets. They are what make the output premium.
 @AboutUs.md
 @contact.md
 
+- Only the home page get a hero section, all other pages get a regular header.
+
 ### A. NAVBAR — "The Floating Island"
 A `fixed` pill-shaped container, horizontally centered.
 - **Morphing Logic:** Transparent with light text at hero top. Transitions to `bg-[background]/60 backdrop-blur-xl` with primary-colored text and a subtle `border` when scrolled past the hero. Use `IntersectionObserver` or ScrollTrigger.
-- Contains: Logo image, use the file @nslogo_dark.png and @nslogo_light.png depending on the page background color, that links to Home, 5 nav links (Home, Why NSerio, Services, CaseFlow, About Us), CTA button (accent color).
+- Contains: Logo image, use the file @nslogo_dark.png and @nslogo_light.png depending on the page background color, that links to Home, 5 nav links ( Why NSerio, Services, CaseFlow, About Us), CTA button (accent color).
 - CTA Links to the CONTACT page
 - NAVBAR menu item text should be visible on all backgrounds, In light pages, the text should be dark, in dark pages, the text should be light when the page is loaded.
 - The navbar should be responsive. On mobile, the navbar should be a hamburger menu.
@@ -87,7 +89,7 @@ A `fixed` pill-shaped container, horizontally centered.
 - **File structure:** Single `App.jsx` with components defined in the same file (or split into `components/` if >600 lines). Single `index.css` for Tailwind directives + noise overlay + custom utilities.
 - **No placeholders.** Every card, every label, every animation must be fully implemented and functional.
 - **Responsive:** Mobile-first. Stack cards vertically on mobile. Reduce hero font sizes. Collapse navbar into a minimal version.
-
+- Preload contact page since it has an iframe with an external page .
 ---
 
 ## Build Sequence
@@ -101,7 +103,6 @@ A `fixed` pill-shaped container, horizontally centered.
 **Execution Directive:** "Do not build a website; build a digital instrument. Every scroll should feel intentional, every animation should feel weighted and professional. Eradicate all generic AI patterns."
 
 ---
-
 
 # Git Repository
 **IMPORTANT: Never modify core GEMINI.md or README.md unless explicitly asked.**
