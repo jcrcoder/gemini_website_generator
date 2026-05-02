@@ -8,18 +8,16 @@ Act as a World-Class Senior Creative Technologist and Lead Frontend Engineer. Yo
 
 When the user asks to build a site (or this file is loaded into a fresh project), immediately ask **exactly these questions** using AskUserQuestion in a single call, then build the full site from the answers. Do not ask follow-ups. Do not over-discuss. Build.
 
-### Questions (all in one AskUserQuestion call)
+### Website Definitions 
+**Pages** - There will be 6 pages "Home", "Why NSerio", "Services", "CaseFlow","About Us", "CONTACT"
 
-1. **"What's the brand name and one-line purpose?"** — Free text. Example: "Nura Health — precision longevity medicine powered by biological data."
-2. **"Pick an aesthetic direction"** — Single-select from the presets below. Each preset ships a full design system (palette, typography, image mood, identity label).
-3. **"What are your 3 key value propositions?"** — Free text. Brief phrases. These become the Features section cards.
-4. **"What should visitors do?"** — Free text. The primary CTA. Example: "Join the waitlist", "Book a consultation", "Start free trial".
+**"What should visitors do?"** — The primary CTA is "Contact Us"
 
 ---
 
-## Aesthetic Presets
-
-Each preset defines: `palette`, `typography`, `identity` (the overall feel), and `imageMood` (Unsplash search keywords for hero/texture images).
+## Aesthetic Preset
+Responsiveness: The website is intended for both desktop and mobile use. It should be responsive on all devices. 
+Defines: `palette`, `typography`, `identity` (the overall feel), and `imageMood` (Unsplash search keywords for hero/texture images).
 
 ### Preset A — "Organic Tech" (Clinical Boutique)
 - **Identity:** A bridge between a biological research lab and an avant-garde luxury magazine.
@@ -68,178 +66,64 @@ These rules apply to ALL presets. They are what make the output premium.
 - Use `gsap.context()` within `useEffect` for ALL animations. Return `ctx.revert()` in the cleanup function.
 - Default easing: `power3.out` for entrances, `power2.inOut` for morphs.
 - Stagger value: `0.08` for text, `0.15` for cards/containers.
+- **GSAP ScrollTrigger Layout Rules:** When stacking or pinning overlapping cards dynamically, NEVER use CSS `position: sticky`. ALWAYS use GSAP's native `pin: true` combined with `pinSpacing: false` on the target elements, layering them cleanly via CSS `zIndex`. Mixing CSS sticky bindings with dynamic ScrollTrigger calculations guarantees layout bleeding and viewport overlaps.
 
 ---
 
-## Component Architecture (NEVER CHANGE STRUCTURE — only adapt content/colors)
+# ALL PAGES
+**IMPORTANT** Each page will have a corresponding .md file in the PageContent folder for the content. The different Sections will be specified as h2 headings in each the files. 
+**Pages** - pages are inside de PageContent folder:
+@Home.md
+@WhyNserio.md
+@Services.md
+@CaseFlow.md
+@AboutUs.md
+@contact.md
+
+- Only the home page get a hero section, all other pages get a regular header.
 
 ### A. NAVBAR — "The Floating Island"
 A `fixed` pill-shaped container, horizontally centered.
 - **Morphing Logic:** Transparent with light text at hero top. Transitions to `bg-[background]/60 backdrop-blur-xl` with primary-colored text and a subtle `border` when scrolled past the hero. Use `IntersectionObserver` or ScrollTrigger.
-- Contains: Logo (brand name as text), 3-4 nav links, CTA button (accent color).
+- Contains: Logo image, use the file @nslogo_dark.png and @nslogo_light.png depending on the page background color, that links to Home, 5 nav links ( Why NSerio, Services, CaseFlow, About Us), CTA button (accent color).
+- CTA Links to the CONTACT page
+- NAVBAR menu item text should be visible on all backgrounds, In light pages, the text should be dark, in dark pages, the text should be light when the page is loaded.
+- The navbar should be responsive. On mobile, the navbar should be a hamburger menu.
 
-### B. HERO SECTION — "The Opening Shot"
-- `100dvh` height. Full-bleed background image (sourced from Unsplash matching preset's `imageMood`) with a heavy **primary-to-black gradient overlay** (`bg-gradient-to-t`).
-- **Layout:** Content pushed to the **bottom-left third** using flex + padding.
-- **Typography:** Large scale contrast following the preset's hero line pattern. First part in bold sans heading font. Second part in massive serif italic drama font (3-5x size difference).
-- **Animation:** GSAP staggered `fade-up` (y: 40 → 0, opacity: 0 → 1) for all text parts and CTA.
-- CTA button below the headline, using the accent color.
-
-### C. FEATURES — "Interactive Functional Artifacts"
-Three cards derived from the user's 3 value propositions. These must feel like **functional software micro-UIs**, not static marketing cards. Each card gets one of these interaction patterns:
-
-**Card 1 — "Diagnostic Shuffler":** 3 overlapping cards that cycle vertically using `array.unshift(array.pop())` logic every 3 seconds with a spring-bounce transition (`cubic-bezier(0.34, 1.56, 0.64, 1)`). Labels derived from user's first value prop (generate 3 sub-labels).
-
-**Card 2 — "Telemetry Typewriter":** A monospace live-text feed that types out messages character-by-character related to the user's second value prop, with a blinking accent-colored cursor. Include a "Live Feed" label with a pulsing dot.
-
-**Card 3 — "Cursor Protocol Scheduler":** A weekly grid (S M T W T F S) where an animated SVG cursor enters, moves to a day cell, clicks (visual `scale(0.95)` press), activates the day (accent highlight), then moves to a "Save" button before fading out. Labels from user's third value prop.
-
-All cards: `bg-[background]` surface, subtle border, `rounded-[2rem]`, drop shadow. Each card has a heading (sans bold) and a brief descriptor.
-
-### D. PHILOSOPHY — "The Manifesto"
-- Full-width section with the **dark color** as background.
-- A parallaxing organic texture image (Unsplash, `imageMood` keywords) at low opacity behind the text.
-- **Typography:** Two contrasting statements. Pattern:
-  - "Most [industry] focuses on: [common approach]." — neutral, smaller.
-  - "We focus on: [differentiated approach]." — massive, drama serif italic, accent-colored keyword.
-- **Animation:** GSAP `SplitText`-style reveal (word-by-word or line-by-line fade-up) triggered by ScrollTrigger.
-
-### E. PROTOCOL — "Sticky Stacking Archive"
-3 full-screen cards that stack on scroll.
-- **Stacking Interaction:** Using GSAP ScrollTrigger with `pin: true`. As a new card scrolls into view, the card underneath scales to `0.9`, blurs to `20px`, and fades to `0.5`.
-- **Each card gets a unique canvas/SVG animation:**
-  1. A slowly rotating geometric motif (double-helix, concentric circles, or gear teeth).
-  2. A scanning horizontal laser-line moving across a grid of dots/cells.
-  3. A pulsing waveform (EKG-style SVG path animation using `stroke-dashoffset`).
-- Card content: Step number (monospace), title (heading font), 2-line description. Derive from user's brand purpose.
-
-### F. MEMBERSHIP / PRICING
-- Three-tier pricing grid. Card names: "Essential", "Performance", "Enterprise" (adjust to fit brand).
-- **Middle card pops:** Primary-colored background with an accent CTA button. Slightly larger scale or `ring` border.
-- If pricing doesn't apply, convert this into a "Get Started" section with a single large CTA.
-
-### G. THE KINETIC BENTO — "The Data Mosaic"
-A non-uniform CSS grid (grid-template-areas) that houses social proof, stats, or small "featurettes."
-- Grid Logic: 4-6 tiles of varying spans (e.g., col-span-2, row-span-2). Use gap-4.
-- Interaction: Magnetic tiles. On mousemove, the tile's content (text or icon) translates slightly toward the cursor using GSAP, while a subtle radial-gradient glow follows the mouse position on the border.
-- The "Pulse" Tile: One tile features a live-updating "System Status" or a "User Count" that uses a GSAP counter to scramble/increment numbers on scroll.
-- Styling: bg-secondary/5 with a 1px border that looks like etched glass.
-
-### H. TEXT SCRUBBER — "The Narrative Reveal"
-A high-impact storytelling section where text "lights up" as the user scrolls. [User Testimonials]
-- Typography: Large, high-contrast sans-serif. Centered or justified.
-- Animation Logic: Wrap every word in a <span> using split-type. Set initial state to opacity-10 (or a dimmed color).
-- ScrollTrigger: Use scrub: true. As the user scrolls, the words transition to opacity-100 and the accent color.
-- Visual Hook: A "horizontal scanner" line (1px accent color) that moves down the screen at the same pace as the text illumination.
-
-### I. HORIZONTAL CASE — "The Infinite Track"
-A transition from vertical scrolling to horizontal movement for portfolio items or "Work" highlights.
-- Interaction: Use GSAP pin: true. The screen "locks," and vertical scroll progress is mapped to the xPercent of a long internal container.
-- The "Skew" Effect: As the user scrolls faster, the cards slightly skew (e.g., skewX: 5deg) to create a sense of physical momentum.
-- Content: Massive aspect-video cards with "parallaxing" images inside. The images should move in the opposite direction of the scroll.
-
-### J. THE COMMAND PALETTE — "The Utility Ghost"
-A minimalist interaction point that makes the website feel like a high-end software tool.
-- Visuals: A simple, centered "Search" bar at the bottom of a section or in the footer.
-- Interaction: Hovering over the bar triggers a "Command + K" floating hint. Clicking it opens a fixed modal with a blurred background.
-- Logic: Use React 19 useTransition to filter through a list of site sections or actions (e.g., "Go to Pricing", "Toggle Dark Mode", "Contact Founder").
-- Animation: GSAP scale(0.9) → scale(1) with a heavy back.out ease for the modal entry.
-
-### K. NOISE & GRAIN — "The Analog Layer"
-A global aesthetic treatment to prevent the "flat digital" look.
-- Structure: A fixed inset-0 div with a high z-index and pointer-events-none.
-- Visual: A repeating SVG noise texture at roughly opacity-5.
-- Animation: A 3-frame GSAP loop that toggles the background-position every 100ms. This creates a subtle "film grain" flicker that makes the Tailwind colors feel more organic and premium.
-
-### L. THE "MESSAGE LOG" — "The Interactive Terminal"
-A component that mimics a Slack or Discord DM thread, making the testimony feel like a real-time conversation.
-
-- Logic: As the user scrolls into view, "messages" (testimonies) pop in one by one with a "typing..." indicator that lasts 0.5s.
-- Animation: A slight y: 20 bounce as each message appears.
-- Visuals: Dark mode "bubbles" with the accent color used for the client's name. A "Live Now" or "Recently Sent" pulsing green dot in the corner of the component.
-- Purpose: Best for "Modern/SaaS" brands to show that clients are currently active and happy.
-
-### M. THE "SPOTLIGHT" STACK — "The Focus Shift"
-A vertical stacking section where only the testimony in the center of the viewport is "active."
-
-- Logic: Use GSAP ScrollTrigger with scrub: true. As a testimony card enters the center 30% of the screen, it scales to 1.1, its opacity goes to 1, and the background of the entire section transitions to a subtle gradient of the client’s brand color.
-- Out-of-Focus State: Cards above and below the center are blurred (blur-lg), desaturated, and scaled down to 0.8.
-- Typography: The "Name" and "Role" are pinned to the right side of the screen and change via a "slide-up" animation as the cards scroll.
-
-### N. THE "KINETIC DRAG" CAROUSEL — "The Tactile Deck"
-A horizontal deck of cards that responds to "momentum dragging" rather than simple clicking.
-
-- Logic: Use InertiaPlugin (or a custom GSAP x setter). The user can "flick" the testimonials left or right.
-- The "Tilt" Effect: As the deck is dragged, the cards "lean" into the direction of the movement (e.g., rotationY: -15deg during a fast drag).
-- Styling: "Glassmorphism" cards with a 1px border-top highlight to catch the "light."
-- Content: Large-scale serif italic quotes (matching your Hero drama font). The background of each card features a low-opacity, large-scale logo of the client’s company.
-
-### O. THE "DOSSIER" HOVER — "The Identity Reveal"
-A minimalist list that expands into a rich visual experience.
-
-- Visuals: A vertical list of names in a massive, outlined heading font (text-transparent border-text).
-- Interaction Logic: As the user hovers over a name, the outline fills with the primary color, and a high-quality "floating" image of the leader appears, following the cursor's movement (GSAP quickTo for x/y).
-- The Bio Reveal: A short, 2-line bio fades in next to the floating image in a clean, monospace font.
-- Animation: Use a "staggered slide-up" for the bio text (SplitText or word-by-word) triggered by the hover event.
-- Styling: grayscale images that transition to sepia or full-color based on the site's imageMood.
-
-### P. THE "SIDE-CAR" SPLIT — "The Editorial Profile"
-A pinned-scroll section that feels like a high-end fashion or tech magazine.
-
-- Layout: A sticky left-side container for the leader’s portrait (occupying 40% of the width) and a scrolling right-side container for their details.
-- Interaction: As the user scrolls through the right-side content (Name, Role, Bio, Socials), the left-side image "morphs" or cross-fades into the next leader.
-- The "Mask" Effect: Use a GSAP clip-path animation (e.g., a circle expanding or a diagonal wipe) to transition between portraits.
-- Typography: Use your Drama Serif Italic for the leader's name and a tight Sans-Bold for their "Philosophy" or "Mission Statement" quote within the bio.
-
-### Q. THE "KINETIC CARPET" — "The Interactive Grid"
-A static grid that feels alive through mouse-tracking and micro-animations.
-
-- Layout: A clean 4x4 or 5x5 grid with gap-px (1px borders) to create a "technical blueprint" look.
-- Interaction Logic: The "Flashlight" Effect. The entire grid is dimmed to opacity-20. As the user moves their cursor, a GSAP-driven radial mask follows the mouse, "lighting up" the logos within a 200px radius to opacity-100.
-- Animation: When a logo enters the "light," it performs a subtle scale(1.05) and a 3D rotationY (5-10 degrees) to give the grid physical depth.
-- Styling: Use your bg-secondary/5 for the grid cells to maintain the "Glassmorphism" theme.
-
-### R. THE "GRAVITY" LOGO CLOUD — "The Floating Ecosystem"
-A more experimental, "Art-Gallery" approach for a boutique feel.
-
-- Visuals: Logos are not in a grid; they are "floating" at different depths (z-index) and scales.
-- Logic: Use a subtle GSAP yoyo animation on each logo (randomized duration between 3-6s) to create a "buoyant" floating effect.
-- Parallax: Each logo has a different data-speed attribute. As the user scrolls, the logos move at different rates, creating a deep 3D field effect.
-- Styling: High-transparency logos that "overlap" slightly, emphasizing the backdrop-blur of your UI.
-
-### S. FOOTER
-- Deep dark-colored background, `rounded-t-[4rem]`.
+### B. FOOTER
+- Deep dark-colored background
 - Grid layout: Brand name + tagline, navigation columns, legal links.
-- Include social media links for LinkedIn, Twitter, Instagram, and Facebook as icons
-- **"System Operational" status indicator** with a pulsing green dot and monospace label.
+- Include social media links for LinkedIn (https://www.linkedin.com/company/nserio), Instagram (https://www.instagram.com/nserio_devs), and YouTube (https://www.youtube.com/@nserio6994) as icons
+- The footer should be responsive. On mobile, the footer should be a hamburger menu.
+- Include the copyright notice at the bottom of the footer.
+- Include a link to the privacy policy.
 
----
+--
 
 ## Technical Requirements (NEVER CHANGE)
-
-- **Stack:** React 19, Tailwind CSS v4.2.5 or newer, GSAP 3.15 (with ScrollTrigger plugin), Lucide React for icons.
+**IMPORTANT** - Each website is created in its own independent folder. Do not use any shared config files between websites all config files should be contained within the website folder.
+**Vite config** don't use @config, and instead use @source directives (the proper Tailwind v4 way), which work alongside the Vite plugin.
+- **Stack:** React 19, Tailwind CSS v4.2.2 or newer, GSAP 3 (with ScrollTrigger plugin), Lucide React for icons.
+- **Tailwind v4 Integration (CRITICAL):** When scaffolding Vite apps in a sub-folder/monorepo, v4's implicit scanning often fails, treating the layout as un-styled. To prevent this, ALWAYS scaffold a local `tailwind.config.js` containing precise glob boundaries (e.g., `content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"]`), and then explicitly inject it directly into the project's CSS file via `@config "../tailwind.config.js";`. Do NOT rely purely on automated v4 discovery.
 - **Fonts:** Load via Google Fonts `<link>` tags in `index.html` based on the selected preset.
 - **Images:** Use real Unsplash URLs. Select images matching the preset's `imageMood`. Never use placeholder URLs.
 - **File structure:** Single `App.jsx` with components defined in the same file (or split into `components/` if >600 lines). Single `index.css` for Tailwind directives + noise overlay + custom utilities.
 - **No placeholders.** Every card, every label, every animation must be fully implemented and functional.
 - **Responsive:** Mobile-first. Stack cards vertically on mobile. Reduce hero font sizes. Collapse navbar into a minimal version.
-
+- Preload contact page since it has an iframe with an external page .
 ---
 
 ## Build Sequence
 
-After receiving answers to the 4 questions:
+1. Map the Aesthetic preset to its full design tokens (palette, fonts, image mood, identity).
+2. Create the specified pages, include links each page in the NAVBAR
+3. Scaffold the project: `npm create vite@latest`, install deps, write all files.
+4. Ensure every animation is wired, every interaction works, every image loads.
 
-1. Map the selected preset to its full design tokens (palette, fonts, image mood, identity).
-2. Generate hero copy using the brand name + purpose + preset's hero line pattern.
-3. Map the 3 value props to the 3 Feature card patterns (Shuffler, Typewriter, Scheduler).
-4. Generate Philosophy section contrast statements from the brand purpose.
-5. Generate Protocol steps from the brand's process/methodology.
-6. Scaffold the project: `npm create vite@latest`, install deps, write all files.
-7. Ensure every animation is wired, every interaction works, every image loads.
 
 **Execution Directive:** "Do not build a website; build a digital instrument. Every scroll should feel intentional, every animation should feel weighted and professional. Eradicate all generic AI patterns."
 
+---
 
 # Git Repository
 **IMPORTANT: Never modify core GEMINI.md or .gitignore unless explicitly asked.**
